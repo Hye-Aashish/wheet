@@ -189,7 +189,7 @@ export default function BlogInner({ currentBlog }) {
               <h3 className="text-lg font-bold text-gray-900">Written by {currentBlog.author}</h3>
               <p className="text-xs font-medium text-[#023c68] uppercase tracking-wider">{currentBlog.authorRole}</p>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Dedicated to researching traditional milling techniques, pure Himalayan botanicals, and bringing authentic holistic health guides to families across the globe.
+                Dedicated to researching stone-ground chakki milling techniques, whole grain nutrition, and bringing authentic culinary guides and healthy recipes to families across the globe.
               </p>
             </div>
           </div>

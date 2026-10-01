@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaGreaterThan } from "react-icons/fa6";
-import { FaSearch, FaFilter, FaStar } from "react-icons/fa";
+import { FaSearch, FaFilter } from "react-icons/fa";
 import AyutramartProduct from "../AyutramartData";
 import ProductAyurvedCard from "./ProductAyurvedCard";
 
@@ -32,16 +32,16 @@ export default function AllProducts() {
       prod.heading?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       prod.description?.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesPrice = prod.price <= priceRange;
+    const matchesPrice = Number(prod.price) <= priceRange;
 
     return matchesCategory && matchesSearch && matchesPrice;
   });
 
   // Sort products
   const sortedProducts = [...filteredProducts].sort((a, b) => {
-    if (sortBy === "price-high") return b.price - a.price;
-    if (sortBy === "price-low") return a.price - b.price;
-    if (sortBy === "rating") return b.rating - a.rating;
+    if (sortBy === "price-high") return Number(b.price) - Number(a.price);
+    if (sortBy === "price-low") return Number(a.price) - Number(b.price);
+    if (sortBy === "rating") return Number(b.rating) - Number(a.rating);
     return 0; // Default newest / original order
   });
 
@@ -50,15 +50,15 @@ export default function AllProducts() {
       
       {/* BANNER HEADER */}
       <div className="relative text-white">
-        <div className="bg-cover bg-center bg-no-repeat relative bg-[url('/img/commonBanner/1.webp')] h-[25vh] lg:h-[38vh] flex flex-col justify-center items-center bg-[#023c68]">
+        <div className="bg-cover bg-center bg-no-repeat relative bg-[url('/img/commonBanner/1.webp')] h-[20vh] sm:h-[25vh] lg:h-[38vh] flex flex-col justify-center items-center bg-[#023c68]">
           <div className="absolute inset-0 bg-black/50"></div>
 
-          <div className="relative text-center px-6 md:px-16 xl:px-40 space-y-3">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold uppercase tracking-wide">
+          <div className="relative text-center px-4 md:px-16 xl:px-40 space-y-2 sm:space-y-3">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold uppercase tracking-wide">
               Our Atta Range
             </h1>
 
-            <div className="flex items-center justify-center gap-x-2 text-sm md:text-base font-medium">
+            <div className="flex items-center justify-center gap-x-2 text-xs sm:text-sm md:text-base font-medium">
               <Link href="/" className="hover:text-amber-400 transition">
                 Home
               </Link>
@@ -70,11 +70,11 @@ export default function AllProducts() {
       </div>
 
       {/* MAIN PRODUCTS SECTION */}
-      <div className="container mx-auto px-5 md:px-12 xl:px-28 py-10 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 xl:px-28 py-8 lg:py-16 pb-28 lg:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
-          {/* SIDEBAR FILTER (DESKTOP) */}
-          <div className="lg:col-span-3 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-8 sticky top-24">
+          {/* SIDEBAR FILTER (VISIBLE ON BOTH MOBILE AND DESKTOP) */}
+          <div className="w-full lg:col-span-3 bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6 sm:space-y-8 static lg:sticky lg:top-24">
             
             {/* Search Input */}
             <div>
@@ -153,20 +153,20 @@ export default function AllProducts() {
           </div>
 
           {/* MAIN PRODUCT GRID & CONTROLS */}
-          <div className="lg:col-span-9 space-y-6">
+          <div className="w-full lg:col-span-9 space-y-6">
             
             {/* Top Controls Bar */}
-            <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-row justify-between items-center gap-4">
               <p className="text-xs sm:text-sm text-gray-600 font-medium">
                 Showing <strong className="text-gray-900 font-bold">{sortedProducts.length}</strong> products
               </p>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <span className="text-xs sm:text-sm text-gray-500 font-medium">Sort by:</span>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-200 bg-gray-50 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#023c68] cursor-pointer"
+                  className="border border-gray-200 bg-gray-50 rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#023c68] cursor-pointer"
                 >
                   <option value="newest">Featured & Newest</option>
                   <option value="price-low">Price: Low to High</option>
@@ -178,13 +178,15 @@ export default function AllProducts() {
 
             {/* Product Grid */}
             {sortedProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 {sortedProducts.map((elm, index) => (
-                  <ProductAyurvedCard key={index} product={elm} />
+                  <div key={elm.id || index} className="w-full flex h-full">
+                    <ProductAyurvedCard product={elm} />
+                  </div>
                 ))}
               </div>
             ) : (
-              <div className="bg-white rounded-2xl p-12 text-center border border-gray-100 space-y-3">
+              <div className="bg-white rounded-2xl p-8 sm:p-12 text-center border border-gray-100 space-y-3">
                 <h3 className="text-xl font-bold text-gray-800">No Products Found</h3>
                 <p className="text-sm text-gray-500">Try adjusting your filters or search keywords.</p>
                 <button
@@ -193,7 +195,7 @@ export default function AllProducts() {
                     setSearchQuery("");
                     setPriceRange(1500);
                   }}
-                  className="px-5 py-2.5 bg-[#023c68] text-white rounded-full text-xs font-bold"
+                  className="px-5 py-2.5 bg-[#023c68] text-white rounded-full text-xs font-bold cursor-pointer"
                 >
                   Clear Filters
                 </button>

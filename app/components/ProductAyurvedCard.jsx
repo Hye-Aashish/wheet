@@ -1,19 +1,15 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { FaLongArrowAltLeft } from "react-icons/fa";
-import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
 import { IoMdCart, IoMdClose } from "react-icons/io";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import Link from "next/link";
 
-import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
+export default function ProductAyurvedCard({ product, data }) {
+  const currentProduct = product || data;
+  if (!currentProduct) return null;
 
-import { addWish, removeWish } from "../store/wishListSlice";
-import { useSelector } from "react-redux";
-
-export default function ProductAyurvedCard({ product }) {
   const {
     img,
     title,
@@ -24,32 +20,15 @@ export default function ProductAyurvedCard({ product }) {
     price,
     rating,
     discount,
-  } = product;
-  const [isDescriptionExpanded, setDescriptionExpanded] = useState(false);
+    category,
+    netWeight,
+    reviewsCount,
+  } = currentProduct;
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const [wishAdd, SetWishAdd] = useState(false);
-  const wishList = useSelector((state) => state.wish?.wishlist || []);
-
-  const isWishList = (productId) => {
-    return wishList?.find((elm) => elm.id == productId);
-  };
-
-  const dispatch = useDispatch();
-
-  const handleWishListToogle = (product) => {
-    if (isWishList(product.id)) {
-      dispatch(removeWish(product));
-      toast.success("🎉 Removed from wishlist successfully!");
-    } else {
-      dispatch(addWish(product));
-      toast.success("🎉 Added to wishlist successfully!");
-    }
-  };
 
   const [quickView, setQuickView] = useState(false);
   const [activeImg, setActiveImg] = useState(inerimgList ? inerimgList[0] : img);
@@ -59,11 +38,20 @@ export default function ProductAyurvedCard({ product }) {
   const imgRef = useRef(null);
 
   const handleMouseMove = (e) => {
+    if (!imgRef.current) return;
     const { left, top, width, height } = imgRef.current.getBoundingClientRect();
     const x = ((e.pageX - left) / width) * 100;
     const y = ((e.pageY - top) / height) * 100;
     setPosition({ x, y });
   };
+
+  const productSlug = title
+    ? title
+        .toLowerCase()
+        .replace(/,/g, "")
+        .split(" ")
+        .join("-")
+    : "";
 
   const QuickView = () => {
     return (
@@ -151,18 +139,17 @@ export default function ProductAyurvedCard({ product }) {
               </div>
 
               <div className="space-y-4 pt-4 border-t border-gray-100">
+                {/* Price and discount commented out */}
+                {/* 
                 <div className="flex items-baseline gap-3">
                   <span className="text-3xl font-bold text-gray-900">₹{price}</span>
                   <span className="line-through text-gray-400 text-base">₹{parseInt(price) + 150}</span>
                   <span className="bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">-{discount}% OFF</span>
                 </div>
+                */}
 
                 <Link
-                  href={`/product/${title
-                    .toLowerCase()
-                    .replace(/,/g, "")
-                    .split(" ")
-                    .join("-")}`}
+                  href={`/product/${productSlug}`}
                   onClick={() => setQuickView(false)}
                   className="w-full bg-[#023c68] hover:bg-[#4a9347] transition text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 text-base shadow-md"
                 >
@@ -177,34 +164,50 @@ export default function ProductAyurvedCard({ product }) {
     );
   };
 
-  const added = mounted && isWishList(product.id);
   return (
     <>
-      <div className="card group w-full shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden bg-white flex flex-col h-full justify-between">
+      <div className="card group w-full shadow-md hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden bg-white flex flex-col h-full justify-between border border-gray-100 hover:border-gray-200">
+        
+        {/* Product Image Box */}
         <div className="relative w-full h-72 sm:h-80 md:h-72 overflow-hidden bg-[#faf8f5] flex items-center justify-center p-4">
-          <span className="absolute top-3 left-3 z-10 bg-green-600 text-white text-xs font-bold py-1 px-2.5 rounded-full shadow-sm">
-            -{discount}%
-          </span>
-          <img
-            src={img}
-            alt={heading}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-contain transition-all duration-300 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 bg-black/5">
+          {/* Discount badge commented out */}
+          {/* 
+          {discount && (
+            <span className="absolute top-3 left-3 z-10 bg-green-600 text-white text-xs font-bold py-1 px-2.5 rounded-full shadow-sm">
+              -{discount}%
+            </span>
+          )}
+          */}
+          
+          <Link href={`/product/${productSlug}`} className="w-full h-full flex items-center justify-center">
             <img
-              src={imgHover}
+              src={img}
               alt={heading}
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain transition-all duration-300 group-hover:scale-105"
             />
+          </Link>
 
-            <div className="absolute inset-0 z-10 flex items-start p-3 justify-end gap-4">
+          {/* Hover Overlay with Quick Preview */}
+          <div className="absolute inset-0 w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100 flex items-center justify-center p-4 bg-black/5 pointer-events-none">
+            <Link href={`/product/${productSlug}`} className="w-full h-full flex items-center justify-center pointer-events-auto">
+              <img
+                src={imgHover || img}
+                alt={heading}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-contain"
+              />
+            </Link>
+
+            <div className="absolute inset-0 z-10 flex items-start p-3 justify-end pointer-events-auto">
               <button
-                onClick={() => setQuickView(true)}
-                className="bg-white/90 backdrop-blur-sm cursor-pointer text-gray-700 hover:bg-black hover:text-white p-2.5 rounded-full shadow-md transition"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setQuickView(true);
+                }}
+                className="bg-white/90 backdrop-blur-sm cursor-pointer text-gray-700 hover:bg-[#023c68] hover:text-white p-2.5 rounded-full shadow-md transition"
                 title="Quick View"
               >
                 <MdOutlineRemoveRedEye className="text-xl" />
@@ -212,42 +215,39 @@ export default function ProductAyurvedCard({ product }) {
             </div>
           </div>
         </div>
-        <div className="p-4 flex-1 flex flex-col justify-between">
+
+        {/* Product Card Content */}
+        <div className="p-5 flex-1 flex flex-col justify-between">
           <div className="space-y-2">
-            <div className="flex justify-between">
-              <p className="font-semibold text-lg text-gray-800 line-clamp-2 min-h-[3.25rem]">{heading}</p>
-            </div>
-            <p className="text-gray-600 text-sm leading-relaxed line-clamp-2 min-h-[2.5rem]">
-              {isDescriptionExpanded
-                ? description
-                : `${description.slice(0, 60)}...`}
+            {category && (
+              <span className="text-[11px] font-bold text-[#023c68] uppercase tracking-wider bg-[#023c68]/10 px-2.5 py-0.5 rounded-full inline-block">
+                {category}
+              </span>
+            )}
+            
+            <Link
+              href={`/product/${productSlug}`}
+              className="block font-bold text-base sm:text-lg text-gray-900 hover:text-[#023c68] transition-colors line-clamp-2 min-h-[3rem]"
+            >
+              {heading}
+            </Link>
+            
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed line-clamp-2 min-h-[2.5rem]">
+              {description}
             </p>
           </div>
 
-          <div className="mt-4">
-            <hr className="text-gray-200 mb-3" />
-
-            <div className="flex gap-x-3 items-center">
-              <button
-                onClick={() => handleWishListToogle(product)}
-                className="cursor-pointer border border-gray-300 p-2.5 font-bold rounded-md hover:border-gray-400 hover:bg-gray-50 transition shrink-0"
-                title={added ? "Remove from Wishlist" : "Add to Wishlist"}
-              >
-                {added ? <FaHeart className="text-red-500 text-lg" /> : <FaRegHeart className="text-lg text-gray-600" />}
-              </button>
-
-              <Link
-                href={`/product/${title
-                  .toLowerCase()
-                  .replace(/,/g, "")
-                  .split(" ")
-                  .join("-")}`}
-                className="font-semibold text-white w-full py-2.5 text-center flex items-center justify-center rounded-md border border-gray-200 bg-[#023c68] hover:bg-[#69a14fe7] transition duration-300 shadow-sm"
-              >
-                <IoMdCart className="mr-1.5 text-lg" />
-                <span>View product</span>
-              </Link>
+          {/* Rating & Net Weight Summary */}
+          <div className="pt-3 border-t border-gray-100 mt-3 flex items-center justify-between">
+            <div className="flex items-center gap-1.5 text-amber-500 text-xs sm:text-sm font-semibold">
+              <FaStar className="text-xs" />
+              <span>{rating || "4.8"}</span>
+              <span className="text-gray-400 font-normal">({reviewsCount || 340})</span>
             </div>
+
+            <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-md">
+              {netWeight || "10 kg"}
+            </span>
           </div>
         </div>
       </div>

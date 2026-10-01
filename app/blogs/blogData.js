@@ -4,7 +4,7 @@ export const blogData = [
     slug: "secrets-to-making-softest-roti-durum-wheat",
     title: "5 Secrets to Making the Softest Rotis Every Time with Durum Wheat Atta",
     subtitle: "Master the art of feather-soft, golden chapatis using 100% stone-ground durum wheat flour.",
-    category: "Organic Wheat & Atta",
+    category: "Wheat Milling & Cooking",
     image: "/img/blog1.png",
     author: "Chef Aarav Sharma",
     authorRole: "Senior Culinary Expert & Food Stylist",
@@ -14,16 +14,16 @@ export const blogData = [
     views: "2.4k",
     likes: 312,
     commentsCount: 18,
-    tags: ["durum wheat", "roti tips", "kitchen hacks", "healthy eating", "BAAZ Atta"],
+    tags: ["durum wheat", "soft rotis", "chapatis", "cooking tips", "BAAZ Atta"],
     excerpt: "Struggling with dry or hard rotis? Discover how 100% pure durum wheat flour and proper dough hydration techniques keep your chapatis feather-soft for hours.",
     content: [
       {
         heading: "1. Choose Stone-Ground Durum Wheat Atta",
-        text: "The journey to soft rotis begins with selecting high-protein, nutrient-rich wheat. BAAZ Durum Wheat Traditional Atta is slowly chakki-ground, preserving the natural germ, bran, and essential oils that keep flour moist and elastic during kneading."
+        text: "The journey to soft rotis begins with selecting high-protein, nutrient-rich wheat. BAAZ Durum Wheat Traditional Atta is slowly chakki-ground, preserving the natural wheat germ, wholesome bran, and essential oils that keep flour moist and elastic during kneading."
       },
       {
         heading: "2. The Warm Water & Rest Rule",
-        text: "Always use lukewarm water (or warm milk for special softness) when kneading dough. After kneading into a smooth, pliable ball, cover it with a damp cloth and let it rest for at least 20–30 minutes. This allows gluten networks to relax and starch granules to fully absorb moisture."
+        text: "Always use lukewarm water when kneading dough. After kneading into a smooth, pliable ball, cover it with a damp cloth and let it rest for at least 20–30 minutes. This allows the natural wheat proteins to relax and starch granules to fully absorb moisture."
       },
       {
         heading: "3. Don't Over-Dust with Dry Flour",
@@ -31,7 +31,7 @@ export const blogData = [
       },
       {
         heading: "4. Master the Tawa Heat Control",
-        text: "Cook your roti on a preheated, medium-high iron or heavy-bottom tawa. Too low heat will dry out the dough before it cooks; too high heat will char the surface leaving the center uncooked. Look for tiny bubbles on top before flipping!"
+        text: "Cook your roti on a preheated, medium-high iron or heavy-bottom tawa. Too low heat will dry out the dough before it cooks; too high heat will char the surface leaving the center uncooked. Look for tiny golden bubbles on top before flipping!"
       },
       {
         heading: "5. Store Smartly in an Insulated Casserole",
@@ -41,177 +41,173 @@ export const blogData = [
   },
   {
     id: "2",
-    slug: "shilajit-himalayan-booster-energy-stamina",
-    title: "Revitalize with Pure Himalayan Shilajit: The Ultimate Natural Energy Booster",
-    subtitle: "Uncover the ancient Himalayan resin prized for over 3,000 years in Ayurvedic medicine.",
-    category: "Ayurvedic Wellness",
-    image: "/img/blog1.png",
-    author: "Dr. Ananya Verma",
-    authorRole: "Ayurvedic Practitioner & Herbalist",
-    authorAvatar: "https://i.pravatar.cc/150?img=47",
-    date: "September 25, 2026",
+    slug: "traditional-stone-ground-chakki-atta-benefits",
+    title: "Why Traditional Stone-Ground Chakki Atta is Superior to Modern Roller Mills",
+    subtitle: "Explore the age-old art of slow stone milling that preserves vital wheat germ oils, dietary fiber, and natural taste.",
+    category: "Stone Chakki Milling",
+    image: "/img/blog2.png",
+    author: "Dr. Vikram Rathi",
+    authorRole: "Grain Scientist & Agricultural Specialist",
+    authorAvatar: "https://i.pravatar.cc/150?img=32",
+    date: "September 24, 2026",
     readTime: "6 min read",
     views: "3.1k",
     likes: 485,
     commentsCount: 29,
-    tags: ["shilajit", "ayurveda", "stamina", "vitality", "natural wellness"],
-    excerpt: "Uncover the ancient Himalayan resin prized for over 3,000 years. Learn how Shilajit enhances cellular energy production (ATP), balances hormones, and fights fatigue naturally.",
+    tags: ["stone ground", "chakki fresh", "whole wheat", "nutrition", "unbleached"],
+    excerpt: "Learn how cold-temperature stone chakki milling protects vital micronutrients, vitamin E, and natural fiber compared to high-heat commercial steel roller mills.",
     content: [
       {
-        heading: "What is Himalayan Shilajit?",
-        text: "Formed over centuries through the slow decomposition of organic plant matter trapped between Himalayan rocks at high altitudes, Shilajit is a tar-like mineral resin packed with over 84 ionic minerals, humic substances, and fulvic acid."
+        heading: "The Science of Cold Stone-Ground Milling",
+        text: "Commercial industrial steel roller mills generate intense friction heat, often exceeding 90°C, which degrades delicate wheat germ oils and vitamins. In contrast, traditional stone chakki milling rotates slowly at low temperatures, ensuring all heat-sensitive nutrients remain intact."
       },
       {
-        heading: "Fulvic Acid: Nature's Nutrient Conductor",
-        text: "The primary active compound in pure Shilajit is Fulvic Acid. It acts as a powerful cellular transporter, carrying trace minerals directly into mitochondria to stimulate ATP synthesis—your body's core energy currency."
+        heading: "Preserving the Entire Wheat Grain Trio",
+        text: "Every wheat kernel contains three components: the fibrous bran, the starchy endosperm, and the nutrient-dense germ. BAAZ Chakki Atta retains 100% of these parts, delivering authentic stone-ground nutrition without separating the germ."
       },
       {
-        heading: "Key Health Benefits",
-        text: "Regular consumption of purified Shilajit supports elevated stamina, faster post-exercise muscle recovery, improved mental alertness, healthy testosterone levels in men, and radiant vitality in women."
+        heading: "Natural Wheat Sweetness & Aroma",
+        text: "Stone-ground flour retains the natural sugars and volatile aromatic compounds of whole grains, resulting in rotis that taste richer, sweeter, and more fragrant straight off the flame."
       },
       {
-        heading: "How to Identify 100% Pure Resin",
-        text: "Pure Shilajit dissolves completely in warm water or milk without leaving gritty residue. It hardens when cold and becomes pliable when warm in your hands, giving off a distinct earthy aroma."
-      },
-      {
-        heading: "Recommended Usage",
-        text: "Dissolve a pea-sized portion (approx. 250–500mg) in warm milk, green tea, or warm water every morning on an empty stomach for optimal absorption."
+        heading: "Zero Artificial Additives & Bleaching Agents",
+        text: "Unlike refined flours that are chemically bleached with chlorine dioxide or benzoyl peroxide, pure stone-ground durum wheat flour retains its wholesome creamy golden tone naturally."
       }
     ]
   },
   {
     id: "3",
-    slug: "kashmiri-kesar-saffron-benefits-glowing-skin-mood",
-    title: "Enhance Vitality with Premium Kashmiri Kesar: The Golden Spice of Health",
-    subtitle: "Hand-harvested saffron threads from Kashmir that nourish skin, uplift mood, and strengthen immunity.",
-    category: "Ayurvedic Wellness",
-    image: "/img/blog2.png",
-    author: "Dr. Vikram Rathi",
-    authorRole: "Wellness & Nutrition Specialist",
-    authorAvatar: "https://i.pravatar.cc/150?img=32",
-    date: "September 20, 2026",
-    readTime: "4 min read",
-    views: "1.9k",
-    likes: 276,
-    commentsCount: 14,
-    tags: ["kesar", "saffron", "skin glow", "mood booster", "antioxidant"],
-    excerpt: "Hand-harvested from Pampore, Kashmir, authentic saffron threads are loaded with crocin and safranal. Discover how Kesar uplifts mood, enhances skin glow, and aids digestion.",
+    slug: "why-multigrain-atta-is-essential-for-modern-diet",
+    title: "Why Multigrain Atta is Essential for a High-Fiber Balanced Modern Diet",
+    subtitle: "Combine wholesome wheat with oats, ragi, chana, and barley for steady blood sugar and digestive wellness.",
+    category: "Healthy Nutrition",
+    image: "/img/blog3.png",
+    author: "Pooja Mehta",
+    authorRole: "Clinical Dietician & Food Nutritionist",
+    authorAvatar: "https://i.pravatar.cc/150?img=25",
+    date: "September 18, 2026",
+    readTime: "5 min read",
+    views: "2.8k",
+    likes: 410,
+    commentsCount: 22,
+    tags: ["multigrain atta", "dietary fiber", "gut health", "weight management", "BAAZ wheat"],
+    excerpt: "Combining traditional wheat with oats, ragi, chana dal, and barley creates a low-GI flour blend that supports gut digestion, keeps blood sugar steady, and provides sustained energy.",
     content: [
       {
-        heading: "The Golden Harvest of Pampore",
-        text: "Kashmiri Kesar is globally renowned for its dark crimson color, intense aroma, and high concentration of bioactive compounds. Harvested delicately by hand from Crocus sativus flowers, each thread is a concentrated pool of wellness."
+        heading: "The Power of Multi-Grain Synergy",
+        text: "While pure whole wheat is rich in carbohydrates and minerals, blending it with nutrient-dense secondary grains introduces a broader spectrum of essential amino acids, beta-glucan fibers, and bioactive plant minerals."
       },
       {
-        heading: "Crocin & Safranal: Antioxidant Powerhouses",
-        text: "The brilliant red hue of Kashmiri saffron comes from Crocin, a potent water-soluble carotenoid antioxidant that neutralizes free radicals, fights cellular stress, and supports cardiovascular wellness."
+        heading: "Super Grains Inside the BAAZ Multigrain Blend",
+        text: "Our carefully balanced formulation incorporates premium Canadian durum wheat along with fiber-rich rolled oats, calcium-loaded red ragi, high-protein Bengal gram (chana dal), and digestive barley."
       },
       {
-        heading: "Saffron Milk for Deep Sleep & Glowing Skin",
-        text: "Infusing 3-4 threads of Kesar in warm milk before bedtime helps regulate serotonin levels, easing anxiety and promoting restful deep sleep. Its anti-inflammatory properties promote natural complexion radiance."
+        heading: "Low Glycemic Index & Sustained Satiety",
+        text: "The complex carbs and abundant soluble fibers in multigrain flour slow down carbohydrate breakdown, preventing sudden insulin spikes and keeping you energized throughout busy workdays."
       },
       {
-        heading: "How to Test Authenticity",
-        text: "Real saffron threads release color slowly into warm water, turning the liquid a rich golden yellow (never artificial red) while the thread retains its deep red hue."
+        heading: "How to Knead for Maximum Softness",
+        text: "Because multigrain flours contain varied seed grains, allow the kneaded dough to rest for 20 minutes before rolling to ensure all grain particles fully hydrate and soften."
       }
     ]
   },
   {
     id: "4",
-    slug: "ashwagandha-organic-stress-relief-adaptogen",
-    title: "Balance and Calm with Organic Ashwagandha: The King of Adaptogens",
-    subtitle: "Regulate stress hormones, sharpen mental focus, and restore peaceful rest with ancient Withania Somnifera.",
-    category: "Lifestyle & Nutrition",
-    image: "/img/blog3.png",
-    author: "Meera Patil",
-    authorRole: "Holistic Health & Mindfulness Coach",
-    authorAvatar: "https://i.pravatar.cc/150?img=44",
-    date: "September 15, 2026",
-    readTime: "7 min read",
-    views: "2.8k",
-    likes: 410,
-    commentsCount: 22,
-    tags: ["ashwagandha", "stress relief", "cortisol", "sleep quality", "immunity"],
-    excerpt: "Feeling overwhelmed by daily stress? Ashwagandha regulates cortisol levels, calms the nervous system, and promotes restorative deep sleep without drowsiness.",
+    slug: "the-golden-story-of-canadian-durum-wheat",
+    title: "The Golden Harvest: Why Canadian Durum Wheat Makes the World's Best Flour",
+    subtitle: "From pristine northern prairies and long summer sunshine to nutrient-dense amber kernels.",
+    category: "Canadian Grains",
+    image: "/img/blog4.png",
+    author: "Ravi Narayan",
+    authorRole: "Agricultural Quality Inspector",
+    authorAvatar: "https://i.pravatar.cc/150?img=12",
+    date: "September 12, 2026",
+    readTime: "5 min read",
+    views: "1.9k",
+    likes: 276,
+    commentsCount: 14,
+    tags: ["Canadian wheat", "durum harvest", "amber grains", "export quality", "farm fresh"],
+    excerpt: "Discover how Canadian prairie soils, mineral-rich glacier waters, and optimal sun exposure produce dense amber durum wheat kernels renowned worldwide for superior texture and nutrition.",
     content: [
       {
-        heading: "The Modern Epidemic of Stress",
-        text: "Busy work schedules, screen time, and fast-paced living keep our sympathetic nervous system in a constant state of fight-or-flight, elevating cortisol levels and draining daily energy."
+        heading: "Pristine Canadian Prairie Terroir",
+        text: "The Canadian plains possess some of the world's most fertile, mineral-rich soils. Combined with extended summer daylight and clean glacial irrigation, these conditions yield robust wheat crops with naturally higher gluten strength and protein content."
       },
       {
-        heading: "How Ashwagandha Works as an Adaptogen",
-        text: "Ashwagandha (Withania somnifera) contains active compounds called withanolides. These natural adaptogens modulate the HPA (hypothalamic-pituitary-adrenal) axis, bringing cortisol back into healthy equilibrium."
+        heading: "Hard Amber Durum Characteristics",
+        text: "Canadian Amber Durum is globally celebrated for its hard vitreous kernel structure, rich golden-yellow carotenoid pigments, and exceptional dough elasticity, creating chapatis that never tear or turn soggy."
       },
       {
-        heading: "Key Benefits for Mind & Body",
-        text: "Regular intake of organic Ashwagandha reduces feelings of anxiety, sharpens memory and executive focus, supports thyroid health, and improves muscle strength during exercise."
-      },
-      {
-        heading: "Building a Restorative Evening Routine",
-        text: "Mix 1/2 teaspoon of pure organic Ashwagandha powder or resin in warm almond milk with a pinch of nutmeg and cardamom 45 minutes before sleep for a soothing nightcap."
+        heading: "Rigorous Seed Selection & Quality Grading",
+        text: "Every grain sourced for BAAZ Atta undergoes stringent cleaning, destoning, and purity testing to guarantee 100% pure food-grade grain quality in every single bag."
       }
     ]
   },
   {
     id: "5",
-    slug: "safed-musli-root-strength-vitality-stamina",
-    title: "Boost Strength and Endurance with Safed Musli Root",
-    subtitle: "Discover the Ayurvedic 'White Gold' root revered for physical stamina, muscle recovery, and vitality.",
-    category: "Ayurvedic Wellness",
-    image: "/img/blog4.png",
-    author: "Ravi Narayan",
-    authorRole: "Herbal Phytotherapy Researcher",
-    authorAvatar: "https://i.pravatar.cc/150?img=12",
-    date: "September 10, 2026",
-    readTime: "5 min read",
+    slug: "sharbati-vs-durum-wheat-choosing-the-right-atta",
+    title: "Sharbati vs. Durum Wheat Atta: How to Choose the Perfect Flour for Your Kitchen",
+    subtitle: "Understand the distinct qualities of golden Sharbati wheat and high-protein Durum wheat for everyday meals.",
+    category: "Flour Buying Guide",
+    image: "/img/blog1.png",
+    author: "Meera Patil",
+    authorRole: "Culinary Nutritionist & Home Baking Expert",
+    authorAvatar: "https://i.pravatar.cc/150?img=44",
+    date: "September 8, 2026",
+    readTime: "4 min read",
     views: "1.7k",
     likes: 230,
     commentsCount: 11,
-    tags: ["safed musli", "vitality", "muscle strength", "endurance", "herbal power"],
-    excerpt: "Known as 'White Gold' in Ayurveda, Safed Musli is an extraordinary tonic for building physical strength, supporting post-workout muscle recovery, and enhancing endurance.",
+    tags: ["sharbati atta", "durum wheat", "flour comparison", "roti tips", "kitchen guide"],
+    excerpt: "Unsure whether to buy Sharbati Atta or Durum Wheat Atta? Compare moisture retention, natural sweetness, protein content, and cooking performance to find your family's favorite.",
     content: [
       {
-        heading: "What is Safed Musli?",
-        text: "Safed Musli (Chlorophytum borivilianum) is a rare medicinal herb native to tropical Indian forests. The thick tuberous roots are sun-dried and ground to create one of Ayurveda's most potent Rasayanas (rejuvenators)."
+        heading: "What Makes Sharbati Wheat Unique?",
+        text: "Sharbati wheat grains are renowned for their heavy, golden-brown grains grown in rain-fed regions. They possess a natural sweetness and high water absorption capacity, resulting in rotis that remain supple for extended periods."
       },
       {
-        heading: "Natural Saponins for Muscle & Immunity",
-        text: "Safed Musli root is rich in plant saponins, alkaloids, and proteins that nourish body tissues (dhatus), improve protein absorption, and support lean muscle development."
+        heading: "Why Choose Durum Wheat?",
+        text: "Durum wheat is higher in protein and carotenoids, making it ideal for making structured rotis, stuffed parathas, puris, and traditional daily flatbreads that require excellent elasticity and golden color."
       },
       {
-        heading: "Energy Restoration for Athletes & Professionals",
-        text: "Whether recovering from intense physical workouts or chronic tiredness, Safed Musli revitalizes endurance and combats physical exhaustion naturally."
+        heading: "Our Kitchen Recommendation",
+        text: "For daily light rotis with natural sweetness, Sharbati Atta is fantastic. For hearty parathas, pooris, and high-protein nutrition, Durum Wheat Atta is the ultimate kitchen champion."
       }
     ]
   },
   {
     id: "6",
-    slug: "why-multigrain-atta-is-essential-for-modern-diet",
-    title: "Why Multigrain Atta is Essential for a High-Fiber Modern Diet",
-    subtitle: "Combine wholesome wheat with oats, ragi, chana, and flaxseed for steady blood sugar and digestive wellness.",
-    category: "Organic Wheat & Atta",
-    image: "/img/prod2.png",
-    author: "Pooja Mehta",
-    authorRole: "Clinical Dietician & Food Nutritionist",
-    authorAvatar: "https://i.pravatar.cc/150?img=25",
-    date: "September 5, 2026",
-    readTime: "6 min read",
+    slug: "complete-guide-to-storing-wheat-flour-freshness",
+    title: "How to Store Whole Wheat Atta to Preserve Freshness & Nutrients for Months",
+    subtitle: "Keep unbleached, preservative-free whole wheat flour aromatic, fresh, and insect-free in every season.",
+    category: "Kitchen & Storage Tips",
+    image: "/img/blog2.png",
+    author: "Dr. Ananya Verma",
+    authorRole: "Food Safety & Quality Consultant",
+    authorAvatar: "https://i.pravatar.cc/150?img=47",
+    date: "September 2, 2026",
+    readTime: "4 min read",
     views: "2.2k",
     likes: 350,
     commentsCount: 19,
-    tags: ["multigrain atta", "fiber rich", "gut health", "weight management", "BAAZ wheat"],
-    excerpt: "Combining traditional wheat with oats, ragi, chana, and flaxseed creates a low-GI flour that supports gut digestion, keeps blood sugar steady, and provides long-lasting satiety.",
+    tags: ["atta storage", "freshness hacks", "kitchen tips", "pest prevention", "food safety"],
+    excerpt: "Because pure stone-ground whole wheat atta contains natural germ oils and zero preservatives, proper airtight storage is essential to prevent moisture buildup and preserve rich aroma.",
     content: [
       {
-        heading: "The Limitations of Single-Grain Flour",
-        text: "While pure wheat is nutritious, combining multiple grains introduces a broader spectrum of dietary fibers, essential amino acids, and micronutrients essential for modern lifestyle demands."
+        heading: "Why Whole Wheat Flour Needs Thoughtful Storage",
+        text: "Unlike refined flours stripped of germ oils, pure whole wheat atta contains active natural oils and fiber. If exposed to humid air or high heat, these oils can oxidize, affecting the fresh wheat aroma."
       },
       {
-        heading: "Power Grains Inside BAAZ Multigrain Blend",
-        text: "Our blend pairs high-grade durum wheat with fiber-dense oats, calcium-rich ragi, protein-packed Bengal gram (chana), and omega-3 rich flaxseeds for balanced daily nutrition."
+        heading: "1. Transfer to Airtight Stainless Steel or Glass Containers",
+        text: "After unsealing your BAAZ food-grade bag, transfer the flour into a thoroughly dry, airtight stainless steel bin or food-grade storage container with a tight silicone seal."
       },
       {
-        heading: "Sustained Energy & Low Glycemic Index",
-        text: "The complex carbs and dietary fiber in multigrain flour digest gradually, preventing sudden blood sugar spikes and keeping you energetic throughout the afternoon."
+        heading: "2. Natural Desiccants: Dried Bay Leaves & Cloves",
+        text: "Place 3–4 clean, dry bay leaves (tejpatta) or whole cloves inside the storage container. Their natural aromatic terpenes naturally repel flour weevils without leaving any unwanted flavor in your rotis."
+      },
+      {
+        heading: "3. Keep Away from Moisture & Heat Sources",
+        text: "Store your flour bin in a cool, dark kitchen pantry away from steam from dishwashers or stovetops. Always use a completely dry scoop or measuring cup."
       }
     ]
   }

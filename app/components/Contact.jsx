@@ -1,4 +1,4 @@
-// "use client"
+"use client";
 import React from "react";
 import Link from "next/link";
 import { FaGreaterThan } from "react-icons/fa6";
@@ -8,193 +8,188 @@ import {
   FaEnvelopeCircleCheck,
 } from "react-icons/fa6";
 
-
 export default function Contact() {
   const contactInfo = [
     {
       icon: <FaMapLocationDot />,
-      link: "#",
+      link: "https://maps.google.com/?q=123+12885+85+Ave+Surrey+BC+Canada",
       title: "Our Address",
-      text: "66 Broklyn Golden Street,New York. USA",
-      text1: "66 Broklyn Golden Street,",
-      text2: "New York. USA",
+      text1: "123, 12885 85 Ave,",
+      text2: "Surrey, BC, Canada",
     },
-
     {
       icon: <FaEnvelopeCircleCheck />,
-      link: "info@vajrajewels.com",
+      link: "mailto:Baazatta1@gmail.com",
       title: "Email Us",
-      text: "info@vajrajewels.com",
-      text1: "needhelp@organik.com",
-      text2: "info@company.com",
+      text1: "Baazatta1@gmail.com",
+      text2: "info@baazatta.com",
     },
     {
       icon: <FaPhoneVolume />,
-      link: "tel:+91 9448387231",
+      link: "tel:+17789812002",
       title: "Call Us",
-      text: "+91 9448387231",
-      text1: "92 666 888 0000",
-      text2: "666 000 6666",
+      text1: "+1 (778) 981-2002",
+      text2: "+1 778 981 2002",
     },
   ];
+
   return (
     <>
-      <div className="">
+      <div>
+        {/* TOP HERO BANNER */}
         <div className="relative text-white">
-          <div className="bg-cover bg-center bg-no-repeat relative bg-[url('/img/commonBanner/1.webp')] h-[20vh] lg:h-[40vh] flex flex-col justify-center items-center">
-            <div className="absolute inset-0 bg-black/40"></div>
+          <div className="bg-cover bg-center bg-no-repeat relative bg-[url('/img/commonBanner/1.webp')] h-[22vh] lg:h-[36vh] flex flex-col justify-center items-center bg-[#023c68]">
+            <div className="absolute inset-0 bg-black/45"></div>
 
-            <div className="relative text-center px-6 md:px-16 xl:px-40">
-            <h1 className="text-2xl md:text-5xl lg:text-6xl uppercase">
-            Contact Us
+            <div className="relative text-center px-6 md:px-16 xl:px-40 space-y-2">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif uppercase font-bold tracking-wide">
+                Contact Us
               </h1>
 
-              <div className="flex items-center justify-center gap-x-2 mt-4 text-sm md:text-base">
-                <Link href="/" className="hover:text-gray-300 transition">
+              <div className="flex items-center justify-center gap-x-2 text-sm md:text-base font-medium">
+                <Link href="/" className="hover:text-amber-400 transition">
                   Home
                 </Link>
                 <FaGreaterThan className="text-xs opacity-70" />
-                <span className="font-medium">Contact Us</span>
+                <span className="text-amber-400">Contact Us</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative px-5 md:px-12 xl:px-32 py-5 md:py-10">
+        {/* CONTACT CONTENT SECTION */}
+        <div className="relative px-5 md:px-12 xl:px-32 py-10 lg:py-16 bg-[#faf8f5]">
           <img
             src="/img/anime/anime1.webp"
-            alt="anime"
-            className="float-left hidden lg:block w-md -z-10 absolute -left-10 top-0 opacity-40"
+            alt=""
+            className="float-left hidden lg:block w-md -z-10 absolute -left-10 top-0 opacity-40 pointer-events-none"
           />
           <img
             src="/img/anime/anime2.webp"
-            alt="anime"
-            className="float-right hidden  w-md -z-10 absolute right-0 bottom-0 opacity-40"
+            alt=""
+            className="float-right hidden w-md -z-10 absolute right-0 bottom-0 opacity-40 pointer-events-none"
           />
 
           <div>
-            <div className="flex flex-col items-center justify-center gap-y-4 text-center">
-              <img src="/img/contact-us/1.png" alt="" />
-              <h6 className="text-gray-400 text-lg lg:text-xl">
+            <div className="flex flex-col items-center justify-center gap-y-3 text-center mb-8 lg:mb-12">
+              <span className="text-xs md:text-sm font-bold tracking-widest text-[#023c68] uppercase bg-[#023c68]/10 px-4 py-1.5 rounded-full inline-block">
                 Get in Touch With Us
-              </h6>
-              <h5 className="font-semibold text-slate-700 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-                Do You’ve Any Question? <br />
-                Write us a Message
-              </h5>
+              </span>
+              <h2 className="font-bold font-serif text-slate-800 text-3xl md:text-4xl lg:text-5xl">
+                Have Any Questions? <br />
+                Send Us a Message
+              </h2>
             </div>
-            <div className="flex  lg:mt-12 relative z-10 items-center flex-col lg:flex-row gap-x-10">
-              <div className="left w-full lg:w-[70%]">
-                <div className="form-container mt-4 lg:mt-8">
-                  <form>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                      <input
-                        type="text"
-                        placeholder="Your Name"
-                        className="bg-[#F4F4F4] px-5 py-3 text-lg md:text-xl font-serif rounded"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Email Address"
-                        className="bg-[#F4F4F4] px-5 py-3 text-lg lg:text-xl font-serif rounded"
-                      />
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
-                      <input
-                        type="text"
-                        placeholder="Phone Number"
-                        className="bg-[#F4F4F4] px-5 py-3 text-lg md:text-xl font-serif rounded"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Subject"
-                        className="bg-[#F4F4F4] px-5 py-3 text-lg md:text-xl font-serif rounded"
-                      />
-                    </div>
 
-                    <textarea
-                      placeholder="Write your message"
-                      className="bg-[#F4F4F4] px-5 py-3 text-lg md:text-xl rounded h-40 lg:h-60 w-full mt-4"
-                    ></textarea>
-
-                    <div className="flex flex-col gap-y-4 md:flex-row items-center justify-between mt-4">
-                      <div className="flex items-center justify-center w-full md:w-fit">
-                        <label
-                          htmlFor="file-upload"
-                          className="flex  items-center px-4 justify-center md:justify-start w-full  border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-[#F4F4F4] hover:bg-gray-100 transition"
-                        >
-                          <div className="flex flex-col md:flex-row  gap-x-1 items-center justify-start py-2">
-                            <p className="mb-1  text-sm text-gray-500">
-                              <span className="font-semibold">
-                                Click to upload
-                              </span>{" "}
-                              or drag and drop
-                            </p>
-                            <p className="text-xs text-gray-500">
-                              PDF, DOCX, PNG, JPG (max 5MB)
-                            </p>
-                          </div>
-                          <input
-                            id="file-upload"
-                            type="file"
-                            className="hidden"
-                          />
-                        </label>
+            <div className="flex lg:mt-8 relative z-10 items-start flex-col lg:flex-row gap-8 xl:gap-12">
+              
+              {/* CONTACT FORM */}
+              <div className="left w-full lg:w-[68%] bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-sm border border-gray-100">
+                <div className="form-container">
+                  <form onSubmit={(e) => e.preventDefault()}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold text-gray-700 mb-1.5">Your Name</label>
+                        <input
+                          type="text"
+                          placeholder="John Doe"
+                          className="bg-[#F8F9FA] border border-gray-200 focus:border-[#023c68] focus:bg-white px-4 py-3 text-sm md:text-base rounded-xl w-full outline-none transition"
+                        />
                       </div>
-                      <button className="bg-[#60BE74] px-6 lg:px-8 py-1  md:py-2 lg:py-3 rounded text-white text-lg lg:text-xl font-semibold">
-                        Send A Message
+                      <div>
+                        <label className="block text-xs font-semibold text-gray-700 mb-1.5">Email Address</label>
+                        <input
+                          type="email"
+                          placeholder="john@example.com"
+                          className="bg-[#F8F9FA] border border-gray-200 focus:border-[#023c68] focus:bg-white px-4 py-3 text-sm md:text-base rounded-xl w-full outline-none transition"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                      <div>
+                        <label className="block text-xs font-semibold text-gray-700 mb-1.5">Phone Number</label>
+                        <input
+                          type="tel"
+                          placeholder="+1 (778) 981-2002"
+                          className="bg-[#F8F9FA] border border-gray-200 focus:border-[#023c68] focus:bg-white px-4 py-3 text-sm md:text-base rounded-xl w-full outline-none transition"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold text-gray-700 mb-1.5">Subject</label>
+                        <input
+                          type="text"
+                          placeholder="Inquiry about BAAZ Atta"
+                          className="bg-[#F8F9FA] border border-gray-200 focus:border-[#023c68] focus:bg-white px-4 py-3 text-sm md:text-base rounded-xl w-full outline-none transition"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="mt-4">
+                      <label className="block text-xs font-semibold text-gray-700 mb-1.5">Your Message</label>
+                      <textarea
+                        placeholder="How can we assist you with our products or orders?"
+                        className="bg-[#F8F9FA] border border-gray-200 focus:border-[#023c68] focus:bg-white px-4 py-3 text-sm md:text-base rounded-xl h-36 lg:h-44 w-full outline-none transition resize-none"
+                      ></textarea>
+                    </div>
+
+                    <div className="flex items-center justify-end mt-6">
+                      <button
+                        type="submit"
+                        className="bg-[#023c68] hover:bg-[#4a9347] transition-colors duration-300 px-8 py-3.5 rounded-xl text-white text-base font-bold shadow-md cursor-pointer inline-flex items-center gap-2"
+                      >
+                        Send Message
                       </button>
                     </div>
-                   
                   </form>
                 </div>
               </div>
 
-              <div className="right mt-4 md:mt-6 lg:mt-0 w-full lg:w-[30%]    ">
-                <div className="grid w-full  grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6 relative">
+              {/* CONTACT INFO SIDEBAR */}
+              <div className="right w-full lg:w-[32%] space-y-4">
+                <div className="grid w-full grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
                   {contactInfo.map((info, index) => (
-                    <div
+                    <a
                       key={index}
-                      className="contact-info  p-4 flex flex-col  lg:flex-row  gap-x-4 items-center text-center"
+                      href={info.link}
+                      target={info.title === "Our Address" ? "_blank" : undefined}
+                      rel="noopener noreferrer"
+                      className="contact-info bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col lg:flex-row gap-4 items-center text-center lg:text-left hover:shadow-md hover:border-gray-200 transition group"
                     >
-                      <div className="icon text-green-600 h-20 w-20 lg:h-20 lg:w-20 bg-[#F4F4F4] rounded-full text-4xl flex items-center justify-center">
+                      <div className="icon text-[#023c68] group-hover:bg-[#023c68] group-hover:text-white transition-colors duration-300 h-16 w-16 bg-[#023c68]/10 rounded-2xl text-2xl flex items-center justify-center shrink-0">
                         {info.icon}
                       </div>
-                      <div className="content text-center lg:text-left">
-                        <h5 className="text-lg md:text-2xl font-semibold text-black mb-1">
+                      <div className="content">
+                        <h3 className="text-base font-bold text-gray-900 mb-1">
                           {info.title}
-                        </h5>
-                        <div className="text-xl font-light text-gray-400 md:text-nowrap">
-                          <p>{info.text1}</p>
+                        </h3>
+                        <div className="text-sm text-gray-600 space-y-0.5 leading-snug">
+                          <p className="font-medium">{info.text1}</p>
                           <p>{info.text2}</p>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div className="contact-form  ">
-          <div className="container mx-auto px-5 md:px-12 xl:px-32 flex flex-col gap-y-10 lg:gap-y-24 justify-between "></div>
-
-          <section className="mt-[30px] lg:mt-[60px]">
-            <div className="w-[100%] h-[250px] lg:h-[450px] overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.209006059291!2d77.64270267507622!3d12.958473687355697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1405814daf83%3A0xcd86b42b2a8e8a68!2s44%2C%20KGA%20Rd%2C%20ISRO%20Colony%2C%20Kodihalli%2C%20Bengaluru%2C%20Karnataka%20560008!5e0!3m2!1sen!2sin!4v1741583222912!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Location"
-              ></iframe>
-            </div>
-          </section>
-        </div>
+        {/* GOOGLE MAP */}
+        <section className="w-full h-[300px] lg:h-[450px] overflow-hidden bg-gray-100">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.839218680074!2d-122.86828592323382!3d49.15579977931818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9571e219769%3A0x6b1ea87d377b63f5!2s12885%2085%20Ave%2C%20Surrey%2C%20BC%20V3W%200K8%2C%20Canada!5e0!3m2!1sen!2sca!4v1710000000000!5m2!1sen!2sca"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="BAAZ Atta Location Map"
+          ></iframe>
+        </section>
       </div>
     </>
   );

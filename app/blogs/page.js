@@ -1,19 +1,16 @@
-import React from 'react'
-import BlogPage from '../components/BlogPage'
+import React from 'react';
+import BlogPage from '../components/BlogPage';
 
 export const metadata = {
-  title: "Ayutramart Blog - Wellness Tips, Herbal Insights & More",
+  title: "BAAZ Atta Journal - Wheat Milling Insights, Recipes & Healthy Living Guides",
   description:
-    "Explore the Ayutramart blog for the latest wellness tips, herbal remedies, health guides, and product updates. Empower your natural wellness journey with trusted insights.",
+    "Explore the BAAZ Atta blog for expert roti-making secrets, stone-ground chakki milling insights, multigrain nutrition, and wholesome culinary guides.",
 };
-
-
 
 export default function page() {
   return (
     <div>
-      <BlogPage/>
-      
+      <BlogPage />
     </div>
-  )
+  );
 }

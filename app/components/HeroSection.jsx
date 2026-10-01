@@ -16,39 +16,34 @@ export default function HeroSection() {
       link: "",
       banner: "/img/banner/2.png",
     },
-
   ];
 
   return (
-    <>
+    <section className="w-full relative bg-[#faf8f5] overflow-hidden">
       <Swiper
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper relative"
+        className="mySwiper relative w-full"
       >
         {swiperData.map((elm, index) => (
-          <SwiperSlide key={index} className="">
-            <div className="h-[30vh] md:h-[57vh] lg:h-[75vh] w-full">
+          <SwiperSlide key={index} className="w-full">
+            <div className="w-full relative">
               <img
                 src={elm.banner}
                 alt="BAAZ Wheat Atta Banner"
                 loading={index === 0 ? "eager" : "lazy"}
                 fetchPriority={index === 0 ? "high" : "auto"}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-auto block object-cover"
               />
             </div>
-
           </SwiperSlide>
         ))}
       </Swiper>
-
-
-
-    </>
+    </section>
   );
 }

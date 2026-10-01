@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 import PrivacyPolicy from '../components/PrivacyPolicy';
 
 export const metadata = {
-  title: "Privacy Policy - Ayutramart",
-  description: "Discover how Ayutramart collects, uses, and safeguards your personal information. Your privacy and data security are our top priorities.",
+  title: "Privacy Policy - BAAZ Atta",
+  description: "Learn how BAAZ Atta collects, uses, and protects your personal data when purchasing our premium wheat flour products.",
 };
 
 export default function page() {
   return (
     <div>
-      <PrivacyPolicy/>
+      <PrivacyPolicy />
     </div>
-  )
+  );
 }

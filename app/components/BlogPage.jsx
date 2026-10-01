@@ -8,7 +8,7 @@ export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = ["All", "Organic Wheat & Atta", "Ayurvedic Wellness", "Lifestyle & Nutrition"];
+  const categories = ["All", "Wheat Milling & Cooking", "Stone Chakki Milling", "Healthy Nutrition", "Canadian Grains", "Flour Buying Guide"];
 
   const filteredBlogs = blogData.filter((post) => {
     const matchesCategory = activeCategory === "All" || post.category === activeCategory;

@@ -103,22 +103,6 @@ const ProductDetails = ({ slug, singleProduct }) => {
                   <span>SKU: <strong className="text-gray-800">{product.sku}</strong></span>
                 </div>
 
-                {/* Price & Discount */}
-                <div className="bg-[#f7f9f4] p-4 rounded-xl mt-4 flex items-center justify-between">
-                  <div>
-                    <div className="flex items-baseline gap-3">
-                      <span className="text-3xl font-bold text-gray-900">₹{currentPrice}</span>
-                      {product.originalPrice && (
-                        <span className="text-lg text-gray-400 line-through">₹{product.originalPrice}</span>
-                      )}
-                      <span className="bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                        -{product.discount}% OFF
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">Inclusive of all taxes & free shipping options</p>
-                  </div>
-                </div>
-
                 {/* Short Description */}
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed mt-4">
                   {product.description}
@@ -148,7 +132,8 @@ const ProductDetails = ({ slug, singleProduct }) => {
                   </div>
                 </div>
 
-                {/* Package Size Variants Selector */}
+                {/* Package Size Variants Selector (Commented Out) */}
+                {/*
                 {product.variants && product.variants.length > 0 && (
                   <div className="mt-5">
                     <label className="block text-sm font-semibold text-gray-800 mb-2">
@@ -172,9 +157,11 @@ const ProductDetails = ({ slug, singleProduct }) => {
                     </div>
                   </div>
                 )}
+                */}
               </div>
 
-              {/* Quantity Counter & Buttons */}
+              {/* Quantity Counter & Add to Cart / Buy Now Buttons (Commented Out) */}
+              {/*
               <div className="space-y-4 pt-4 border-t border-gray-100">
                 <div className="flex items-center gap-4">
                   <span className="text-sm font-semibold text-gray-800">Quantity:</span>
@@ -211,7 +198,6 @@ const ProductDetails = ({ slug, singleProduct }) => {
                   </button>
                 </div>
 
-                {/* Trust Badges */}
                 <div className="grid grid-cols-2 gap-3 pt-3 text-xs text-gray-600">
                   <div className="flex items-center gap-2">
                     <FaTruck className="text-[#023c68] text-base" />
@@ -223,6 +209,7 @@ const ProductDetails = ({ slug, singleProduct }) => {
                   </div>
                 </div>
               </div>
+              */}
             </div>
           </div>
 

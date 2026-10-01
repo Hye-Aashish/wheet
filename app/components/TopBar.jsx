@@ -32,13 +32,13 @@ export default function TopBar() {
 
           {/* LEFT SIDE - Social Icons + Links */}
           <div className="flex items-center gap-x-5">
-  <a
-              href="tel:+91123456789"
+            <a
+              href="tel:+17789812002"
               className="hover:text-[#023c68] transition"
             >
               <span className="text-gray-500">Call Us:</span>{" "}
               <span className="text-[#023c68] font-medium">
-                +17789812002
+                +1 (778) 981-2002
               </span>
             </a>
 

@@ -1,23 +1,16 @@
-// "use client"
-import React from 'react'
-import Link from 'next/link'
-import { FaGreaterThan } from 'react-icons/fa6'
-import Contact from '../components/Contact'
+import React from 'react';
+import Contact from '../components/Contact';
 
 export const metadata = {
-  title: "Contact Ayutramart - We're Here to Help",
+  title: "Contact Us - BAAZ Atta | Customer Support & Wholesale Inquiries",
   description:
-    "Get in touch with Ayutramart for any questions, support, or product inquiries. We're here to assist you with your herbal wellness journey.",
+    "Get in touch with BAAZ Atta for inquiries about our Canadian Durum Wheat Atta, Multigrain flour, orders, and customer support.",
 };
-
 
 export default function page() {
   return (
-   <>
-  
-   <Contact/>
-   </>
-
-
-  )
+    <>
+      <Contact />
+    </>
+  );
 }

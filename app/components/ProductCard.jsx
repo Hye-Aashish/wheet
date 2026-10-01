@@ -1,89 +1,70 @@
-import { FaRegHeart, FaStarHalfAlt } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
 import Link from "next/link";
-import { FaRegStar, FaStar } from "react-icons/fa6";
-import { CiStar } from "react-icons/ci";
-import { FaRegStarHalfStroke } from "react-icons/fa6";
-import { IoHeartCircle } from "react-icons/io5";
-import { IoMdEye } from "react-icons/io";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const ProductCard = ({ product, bg }) => {
   const {
     id,
     name,
     price,
-    originalPrice,
     img1,
     img2,
-    categorie,
     title,
-    tag,
     discount,
   } = product;
-
-  // id: 2,
-  // toggle: false,
-  // name: "Diamond Ring",
-  // price: 38,
-  // originalPrice: 50,
-  // discount: "50",
-  // img1: "/img/dimondProdcut/2.webp",
-  // img2: "/img/dimondProdcut/3.webp",
-  // categorie: "Rings",
-  // title: "Diamond Ring Crafted with Precision, Offering a Luxurious Look",
-  // price: 38500,
-  // tag: "Best Seller",
-  // classic: false,
-  // inerimgList: [
-  //   "/img/dimondProdcut/2.webp",
-  //   "/img/dimondProdcut/3.webp",
-  //   "/img/dimondProdcut/4.webp",
-  // ],
-  // createdAt: "2024-05-01",
 
   const rating = 5;
   const fullStars = Math.floor(rating);
   const halfStar = rating % 1 !== 0;
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+  const productSlug = (title || name || "")
+    .toLowerCase()
+    .replace(/,/g, "")
+    .split(" ")
+    .join("-");
+
   return (
     <>
-      <div className="group h-[500px] transition-shadow duration-500 ease-in-out overflow-hidden relative">
-        <div className="relative h-[300px] transition-all duration-500 ease-in-out">
-          <div className="discount h-12 text-xs text-center flex items-center justify-center text-black w-12 absolute z-10 left-5 top-4 bg-white rounded-full">
-            {discount}%
-          </div>
-
-          <img
-            src={img1}
-            alt={name}
-            className="w-full h-full opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out object-cover"
-          />
-
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-            <img
-              src={img2}
-              alt={name}
-              className="w-full h-full object-cover transition-opacity duration-500 ease-in-out"
-            />
-            <div className="absolute inset-0 translate-x-8 group-hover:translate-x-0 duration-500 ease-in-out transition-transform flex flex-col gap-y-4 items-end py-4 px-2 text-black text-lg">
-              <div className="p-2 bg-white hover:text-amber-700 rounded-full w-fit transition-all duration-300">
-                <FaRegHeart />
-              </div>
-              <div className="p-2 bg-white hover:text-amber-700 rounded-full w-fit transition-all duration-300">
-                <IoMdEye />
-              </div>
+      <div className="group h-[450px] transition-shadow duration-500 ease-in-out overflow-hidden relative rounded-xl border border-gray-100 bg-white">
+        <div className="relative h-[280px] transition-all duration-500 ease-in-out">
+          {/* Discount badge commented out */}
+          {/*
+          {discount && (
+            <div className="discount h-10 text-xs text-center flex items-center justify-center text-white bg-green-600 font-bold w-10 absolute z-10 left-4 top-4 rounded-full shadow-sm">
+              -{discount}%
             </div>
+          )}
+          */}
+
+          <Link href={`/product/${productSlug}`} className="w-full h-full block">
+            <img
+              src={img1}
+              alt={name || title}
+              className="w-full h-full opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out object-contain p-4"
+            />
+          </Link>
+
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out pointer-events-none">
+            <Link href={`/product/${productSlug}`} className="w-full h-full block pointer-events-auto">
+              <img
+                src={img2 || img1}
+                alt={name || title}
+                className="w-full h-full object-contain p-4 transition-opacity duration-500 ease-in-out"
+              />
+            </Link>
           </div>
         </div>
 
         <div
-          className={`${bg == "bg-black" ? "bg-black text-white" : "bg-[#F3F1EC] text-black"} 
-        absolute bottom-0 left-0 w-full flex flex-col items-center gap-y-4 py-4 
-        overflow-hidden transition-transform duration-500 ease-in-out 
-        translate-y-16 group-hover:translate-y-0`}
+          className={`${bg === "bg-black" ? "bg-black text-white" : "bg-[#F3F1EC] text-black"} 
+          w-full flex flex-col items-center gap-y-3 py-4 px-4 
+          overflow-hidden transition-all duration-300`}
         >
-          <h6 className="text-center text-lg">{title}</h6>
-          <div className="flex items-center text-yellow-500 text-2xl">
+          <Link href={`/product/${productSlug}`}>
+            <h6 className="text-center text-base md:text-lg font-bold hover:text-[#023c68] transition-colors line-clamp-1">{title || name}</h6>
+          </Link>
+
+          <div className="flex items-center text-yellow-500 text-lg">
             {[...Array(fullStars)].map((_, i) => (
               <FaStar key={`full-${i}`} />
             ))}
@@ -93,29 +74,17 @@ const ProductCard = ({ product, bg }) => {
             ))}
           </div>
 
+          {/* Pricing commented out */}
+          {/*
           <div className="flex items-center gap-x-3">
-            <span className="text-xl font-bold text-[#CE967E]">
-              ₹ {product.price}
+            <span className="text-lg font-bold text-[#023c68]">
+              ₹ {price}
             </span>
-            <span className="text-gray-400 line-through">
-              ₹ {product.price + 400}
+            <span className="text-gray-400 line-through text-sm">
+              ₹ {parseInt(price || 0) + 200}
             </span>
           </div>
-
-          <Link
-            href={`/product/${product.title
-              .toLowerCase()
-              .replace(/,/g, "")
-              .split(" ")
-              .join("-")}`}
-            className={`${
-              bg == "bg-black"
-                ? "bg-[#F3F1EC] hover:bg-[#f0ebdf] hover:text-gray-400 text-black"
-                : "bg-black hover:bg-gray-800 text-white hover:text-gray-100"
-            } w-fit duration-500 ease-in-out px-8 py-2 mx-auto block capitalize`}
-          >
-            View product
-          </Link>
+          */}
         </div>
       </div>
     </>
