@@ -9,7 +9,7 @@ const Description = ({ product }) => {
 
     return (
         <div className="w-full">
-            <div className="flex overflow-x-auto border-b border-gray-200">
+            <div className="flex overflow-x-auto custom-scrollbar border-b border-gray-200">
                 {["description", "additional-info", "reviews"].map((tab) => (
                     <button
                         key={tab}

@@ -68,6 +68,10 @@ const Footer = () => {
       title: "All Products",
       href: "/all-products",
     },
+    {
+      title: "Store Locator",
+      href: "/#store-locator",
+    },
   ];
 
   // ================= SOCIAL LINKS =================

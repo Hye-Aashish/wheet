@@ -7,32 +7,37 @@ import { MdSort } from "react-icons/md";
 import { IoColorFilterSharp, IoArrowBack } from "react-icons/io5";
 
 const filterCategories = [
-  { name: "Category", options: ["Durum Wheat (2)", "Organic Atta (2)", "Sharbati (1)"] },
-  { name: "Price", options: ["Under ₹500", "₹500 - ₹1000"] },
-  { name: "Packaging", options: ["5kg Bag", "10kg Bag", "20kg Pack"] },
-  { name: "Form", options: ["Fine Flour", "Coarse Chakki"] },
+  { name: "Category", options: ["Durum Wheat (1)", "Multigrain (1)", "Corn Flour (1)", "Besan Flour (1)", "Jawar Flour (1)"] },
+  { name: "Price", options: ["Under ₹300", "₹300 - ₹600", "Above ₹600"] },
+  { name: "Packaging", options: ["2 lb (907g)", "5 kg Bag", "10 kg Bag", "20 lb (9.07kg)"] },
+  { name: "Form", options: ["Fine Flour", "Stone Ground"] },
 ];
 
 const categoriesData = [
   {
     title: "Durum Wheat Atta",
-    link: "/all-products",
-    image: "/img/prod1.png"
-  },
-  {
-    title: "Organic Chakki Atta",
-    link: "/all-products",
+    link: "/product/baaz-durum-wheat-traditional-atta",
     image: "/img/prod2.png"
   },
   {
-    title: "Sharbati Premium Atta",
-    link: "/all-products",
+    title: "Multigrain Atta",
+    link: "/product/baaz-multigrain-atta",
+    image: "/img/prod1.png"
+  },
+  {
+    title: "Corn Flour",
+    link: "/product/baaz-corn-flour",
     image: "/img/prod3.png"
   },
   {
-    title: "Multigrain Healthy Atta",
-    link: "/all-products",
+    title: "Besan Flour",
+    link: "/product/baaz-besan-flour",
     image: "/img/prod4.png"
+  },
+  {
+    title: "Jawar Flour",
+    link: "/product/baaz-jawar-flour",
+    image: "/img/prod5.png"
   }
 ];
 
@@ -154,7 +159,7 @@ export default function Superdropdown() {
 
       {showFilterDropdown && (
         <div className="inset-0 fixed bg-black/60 z-[99999] flex flex-col justify-end">
-          <div className="w-full bg-white rounded-t-2xl p-6 pb-20 space-y-4 animate-in slide-in-from-bottom duration-200 relative max-h-[80vh] overflow-y-auto">
+          <div className="w-full bg-white rounded-t-2xl p-6 pb-20 space-y-4 animate-in slide-in-from-bottom duration-200 relative max-h-[80vh] overflow-y-auto custom-scrollbar">
             <div className="flex justify-between items-center pb-3 border-b">
               {selectedCategory ? (
                 <button

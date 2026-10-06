@@ -67,7 +67,7 @@ export default function ProductAyurvedCard({ product, data }) {
 
           <div className="grid md:grid-cols-5 gap-6 p-6 sm:p-8 md:p-10">
             <div className="leftside md:col-span-2 w-full flex flex-col-reverse lg:flex-row gap-4 items-center">
-              <div className="flex lg:flex-col gap-2.5 overflow-x-auto max-w-full">
+              <div className="flex lg:flex-col gap-2.5 overflow-x-auto custom-scrollbar max-w-full pb-1">
                 {inerimgList?.map((elm, index) => (
                   <button
                     key={index}
@@ -106,7 +106,7 @@ export default function ProductAyurvedCard({ product, data }) {
               </div>
             </div>
 
-            <div className="md:col-span-3 flex flex-col justify-between space-y-4 max-h-[80vh] overflow-y-auto pr-2">
+            <div className="md:col-span-3 flex flex-col justify-between space-y-4 max-h-[80vh] overflow-y-auto custom-scrollbar pr-2">
               <div className="space-y-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#023c68] bg-[#023c68]/10 px-3 py-1 rounded-full">
                   Quick Preview

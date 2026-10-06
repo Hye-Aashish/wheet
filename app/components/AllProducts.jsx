@@ -15,9 +15,10 @@ export default function AllProducts() {
   const categories = [
     "All",
     "Durum Wheat",
-    "Organic Atta",
-    "Sharbati Atta",
     "Multigrain Atta",
+    "Corn Flour",
+    "Besan Flour",
+    "Jawar Flour",
   ];
 
   // Filter products based on Category, Search & Price

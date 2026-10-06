@@ -13,9 +13,9 @@ export default function ProductAyurved() {
     { label: "All", filter: "All" },
     { label: "Durum Wheat", filter: "Durum" },
     { label: "Multigrain", filter: "Multigrain" },
-    { label: "Whole Wheat", filter: "Whole Wheat" },
-    { label: "Sharbati", filter: "Sharbati" },
-    { label: "Organic Chakki", filter: "Organic" },
+    { label: "Corn Flour", filter: "Corn" },
+    { label: "Besan Flour", filter: "Besan" },
+    { label: "Jawar Flour", filter: "Jawar" },
   ];
 
   const displayedProducts = AyutramartProduct.filter((prod) => {
@@ -47,7 +47,7 @@ export default function ProductAyurved() {
             Our Products
           </h2>
           <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-            Discover all wholesome varieties of premium Canadian Durum Wheat, Sharbati, Organic Chakki, and Multigrain flours.
+            Discover all wholesome varieties of premium Canadian Durum Wheat, Multigrain, Corn Flour, Besan, and Jawar flours.
           </p>
         </div>
 

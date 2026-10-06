@@ -189,3 +189,85 @@ blockquote:after {
   left: 0;
   background-color: #023c68;
 }
+
+/* ==========================================================================
+   SLEEK & SLIM CUSTOM SCROLLBARS (PROJECT-WIDE)
+   ========================================================================== */
+
+/* Smooth scrolling across the entire site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Firefox standard scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(2, 60, 104, 0.4) transparent;
+}
+
+*:hover {
+  scrollbar-color: rgba(2, 60, 104, 0.7) transparent;
+}
+
+/* Chrome, Edge, Safari, Opera (Webkit) - Global Window Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(2, 60, 104, 0.35);
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #023c68;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #012440;
+}
+
+/* Ultra-Sleek Scrollbar for containers (Store Directory, Drawer, Modals, Filters) */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(2, 60, 104, 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(2, 60, 104, 0.25);
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #023c68;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: #d97706;
+}
+
+/* Utility to completely hide scrollbar while preserving scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
