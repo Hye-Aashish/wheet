@@ -17,14 +17,43 @@ export default function StoreLocator() {
   const [copiedId, setCopiedId] = useState(null);
   const [isMapReady, setIsMapReady] = useState(false);
 
-  // Region filter tabs
-  const regions = [
-    { label: "All Locations", value: "All", count: storeLocations.length },
-    { label: "Calgary & Airdrie, AB", value: "Calgary & Airdrie", count: storeLocations.filter(s => s.region === "Calgary & Airdrie").length },
-    { label: "Surrey, BC", value: "Surrey", count: storeLocations.filter(s => s.region === "Surrey").length },
-    { label: "Langley, BC", value: "Langley", count: storeLocations.filter(s => s.region === "Langley").length },
-    { label: "Abbotsford, BC", value: "Abbotsford", count: storeLocations.filter(s => s.region === "Abbotsford").length },
+  const totalLocations = storeLocations.length;
+
+  const regionOrder = [
+    "Surrey, BC",
+    "Abbotsford, BC",
+    "Metro Vancouver, BC",
+    "Langley, BC",
+    "Delta, BC",
+    "Calgary & Area, AB",
+    "Edmonton, AB",
+    "Kelowna, BC",
+    "Kamloops, BC",
+    "Victoria, BC",
+    "Winnipeg, MB",
   ];
+
+  const regionCounts = storeLocations.reduce((acc, loc) => {
+    acc[loc.region] = (acc[loc.region] || 0) + 1;
+    return acc;
+  }, {});
+
+  const sortedRegionKeys = [
+    ...regionOrder.filter((r) => regionCounts[r]),
+    ...Object.keys(regionCounts).filter((r) => !regionOrder.includes(r)).sort(),
+  ];
+
+  const regions = [
+    { label: "All Locations", value: "All", count: totalLocations },
+    ...sortedRegionKeys.map((value) => ({
+      label: value,
+      value,
+      count: regionCounts[value],
+    })),
+  ];
+
+  const albertaCount = storeLocations.filter((s) => s.provinceCode === "AB").length;
+  const surreyCount = storeLocations.filter((s) => s.region === "Surrey, BC").length;
 
   // Filtered stores
   const filteredLocations = storeLocations.filter((loc) => {
@@ -35,6 +64,8 @@ export default function StoreLocator() {
       loc.name.toLowerCase().includes(query) ||
       loc.address.toLowerCase().includes(query) ||
       loc.city.toLowerCase().includes(query) ||
+      loc.badge.toLowerCase().includes(query) ||
+      loc.tag.toLowerCase().includes(query) ||
       loc.postalCode.toLowerCase().includes(query);
 
     return matchesRegion && matchesSearch;
@@ -239,16 +270,20 @@ export default function StoreLocator() {
   const handleFocusAlberta = () => {
     const map = mapInstanceRef.current;
     if (!map) return;
-    setSelectedRegion("Calgary & Airdrie");
-    map.flyTo([51.15, -114.02], 11, { duration: 1 });
+    setSelectedRegion("All");
+    const abStores = storeLocations.filter((s) => s.provinceCode === "AB");
+    if (abStores.length === 0) return;
+    const L = window.L;
+    if (!L) return;
+    const bounds = L.latLngBounds(abStores.map((l) => [l.lat, l.lng]));
+    map.fitBounds(bounds, { padding: [50, 50], maxZoom: 10 });
   };
 
-  // Zoom specifically to BC cluster
   const handleFocusBC = () => {
     const map = mapInstanceRef.current;
     if (!map) return;
-    setSelectedRegion("Surrey");
-    map.flyTo([49.13, -122.75], 11, { duration: 1 });
+    setSelectedRegion("Surrey, BC");
+    map.flyTo([49.13, -122.85], 11, { duration: 1 });
   };
 
   // Copy address helper
@@ -270,7 +305,7 @@ export default function StoreLocator() {
         <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 bg-[#023c68]/10 text-[#023c68] px-4 py-1.5 rounded-full text-xs md:text-sm font-bold tracking-wider uppercase">
             <FaMapMarkerAlt className="text-amber-600 animate-bounce" />
-            <span>12 Verified Retail Locations Across Canada</span>
+            <span>{totalLocations} Verified Retail Locations Across Canada</span>
           </div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 tracking-tight">
@@ -278,7 +313,7 @@ export default function StoreLocator() {
           </h2>
 
           <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-            Our 100% pure Canadian Durum Wheat, Multigrain, Corn, Besan, and Jawar flours are proudly stocked at top retail grocery stores and wholesale markets across <strong>Alberta</strong> and <strong>British Columbia</strong>.
+            Our 100% pure Canadian Durum Wheat, Multigrain, Corn, Besan, and Jawar flours are stocked at partner retailers including <strong>Fruiticana</strong>, <strong>Day To Day</strong>, <strong>Surrey Supermarket</strong>, and more across <strong>British Columbia</strong>, <strong>Alberta</strong>, and <strong>Manitoba</strong>.
           </p>
 
           {/* Quick Cluster Shortcuts */}
@@ -288,21 +323,21 @@ export default function StoreLocator() {
               className="px-4 py-1.5 bg-white hover:bg-stone-100 text-xs md:text-sm font-semibold text-gray-800 rounded-lg border border-stone-200 shadow-2xs transition cursor-pointer flex items-center gap-1.5"
             >
               <span className="w-2 h-2 rounded-full bg-red-500" />
-              <span>Zoom to Calgary & Airdrie (5)</span>
+              <span>Zoom to Alberta ({albertaCount})</span>
             </button>
             <button
               onClick={handleFocusBC}
               className="px-4 py-1.5 bg-white hover:bg-stone-100 text-xs md:text-sm font-semibold text-gray-800 rounded-lg border border-stone-200 shadow-2xs transition cursor-pointer flex items-center gap-1.5"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              <span>Zoom to Greater Vancouver / Surrey (7)</span>
+              <span>Zoom to Surrey, BC ({surreyCount})</span>
             </button>
             <button
               onClick={handleResetView}
               className="px-4 py-1.5 bg-[#023c68] hover:bg-[#03518c] text-xs md:text-sm font-semibold text-white rounded-lg shadow-2xs transition cursor-pointer flex items-center gap-1.5"
             >
               <FaCompressArrowsAlt className="text-xs" />
-              <span>View All 12 Locations</span>
+              <span>View All {totalLocations} Locations</span>
             </button>
           </div>
         </div>
@@ -413,7 +448,7 @@ export default function StoreLocator() {
                       onClick={handleResetView}
                       className="mt-3 text-xs font-bold text-[#023c68] hover:underline cursor-pointer"
                     >
-                      Reset filters to see all 12 locations
+                      Reset filters to see all {totalLocations} locations
                     </button>
                   </div>
                 ) : (

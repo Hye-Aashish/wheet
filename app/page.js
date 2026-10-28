@@ -32,7 +32,7 @@ export default function page() {
       <MarqueeText />
       <Faq />
 
-      {/* Retail Store Locator with Interactive Map & 12 Canadian Locations */}
+      {/* Retail Store Locator with Interactive Map & partner store directory */}
       <StoreLocator />
 
       <BottomfixLinks />
