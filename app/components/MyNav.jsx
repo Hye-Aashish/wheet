@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { storeLocations } from "../data/storeLocations";
+import { VERIFIED_STORE_COUNT } from "../data/siteMetrics";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { HiMenu } from "react-icons/hi";
@@ -89,11 +89,12 @@ export default function MyNav() {
 
   // Quick product links in mobile sidebar
   const quickFlours = [
-    { name: "Durum Wheat", slug: "baaz-durum-wheat-traditional-atta", color: "from-amber-600 to-yellow-600" },
-    { name: "Multigrain Atta", slug: "baaz-multigrain-atta", color: "from-emerald-700 to-green-600" },
+    { name: "Kodo Millet", slug: "baaz-kodo-millet-flour", color: "from-sky-600 to-amber-500" },
+    { name: "Besan", slug: "baaz-besan-chickpea-flour", color: "from-orange-500 to-amber-600" },
+    { name: "Ragi", slug: "baaz-finger-millet-ragi-flour", color: "from-rose-600 to-orange-500" },
     { name: "Corn Flour", slug: "baaz-corn-flour", color: "from-yellow-500 to-amber-500" },
-    { name: "Besan Flour", slug: "baaz-besan-flour", color: "from-amber-500 to-orange-500" },
-    { name: "Jawar Flour", slug: "baaz-jawar-flour", color: "from-stone-600 to-stone-800" },
+    { name: "Bajra", slug: "baaz-pearl-millet-bajra-flour", color: "from-emerald-600 to-green-600" },
+    { name: "Jowar", slug: "baaz-sorghum-jowar-flour", color: "from-stone-600 to-stone-800" },
   ];
 
   // Handle store locator smooth scroll
@@ -295,7 +296,7 @@ export default function MyNav() {
               <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-amber-400/20 rounded-full blur-xl pointer-events-none" />
               <div className="flex items-start justify-between mb-2">
                 <span className="bg-amber-400 text-stone-950 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                  📍 {storeLocations.length} Verified Stores
+                  📍 {VERIFIED_STORE_COUNT} Verified Stores
                 </span>
                 <span className="text-xs text-amber-300 font-bold group-hover:translate-x-1 transition-transform">
                   View Map →

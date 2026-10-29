@@ -14,9 +14,9 @@ import FooterTopMarque from "./components/FooterTopMarque";
 import StoreLocator from "./components/StoreLocator";
 
 export const metadata = {
-  title: "BAAZ Durum Wheat Atta | Premium Quality Whole Wheat Flour for Healthy Living",
+  title: "BAAZ Flour Mill | Matwala Foods Millet & Specialty Flours (4 lb)",
   description:
-    "Discover BAAZ Atta – your trusted source for authentic durum wheat products, wellness solutions, and holistic health. Embrace natural living with quality you can trust.",
+    "Shop BAAZ Flour Mill by Matwala Foods — kodo, besan, ragi, corn, bajra, and jowar flours. Product of Canada, locally milled in Surrey BC.",
 };
 
 export default function page() {

@@ -90,6 +90,18 @@ const Description = ({ product }) => {
                                 <span className="font-medium text-gray-500">Packaging:</span>
                                 <strong className="text-gray-900">{product.packaging || "Food Grade Bag"}</strong>
                             </div>
+                            {product.nutritionPer100g && (
+                              <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 col-span-1 md:col-span-2">
+                                <span className="font-medium text-gray-500 block mb-1">Nutrition Facts (per 100g):</span>
+                                <strong className="text-gray-900">{product.nutritionPer100g}</strong>
+                              </div>
+                            )}
+                            {product.regionalName && (
+                              <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 col-span-1 md:col-span-2">
+                                <span className="font-medium text-gray-500 block mb-1">Also known as:</span>
+                                <strong className="text-gray-900">{product.regionalName}</strong>
+                              </div>
+                            )}
                             <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 col-span-1 md:col-span-2">
                                 <span className="font-medium text-gray-500 block mb-1">Ingredients:</span>
                                 <strong className="text-gray-900">{product.ingredients}</strong>

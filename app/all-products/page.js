@@ -4,7 +4,7 @@ import BottomFilter from "./BottomFilter";
 
 export const metadata = {
   title: "Explore Our Full BAAZ Atta Range | BAAZ Canada",
-  description: "Browse 100% pure stone-ground Durum Wheat, Multigrain, Corn Flour, Besan, and Jawar Flour range.",
+  description: "Browse all six BAAZ Flour Mill 4 lb bags — kodo, besan, ragi, corn, bajra, and jowar.",
 };
 
 export default function Page() {

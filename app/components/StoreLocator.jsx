@@ -313,7 +313,7 @@ export default function StoreLocator() {
           </h2>
 
           <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-            Our 100% pure Canadian Durum Wheat, Multigrain, Corn, Besan, and Jawar flours are stocked at partner retailers including <strong>Fruiticana</strong>, <strong>Day To Day</strong>, <strong>Surrey Supermarket</strong>, and more across <strong>British Columbia</strong>, <strong>Alberta</strong>, and <strong>Manitoba</strong>.
+            BAAZ kodo, besan, ragi, corn, bajra, and jowar flours are stocked at partner retailers including <strong>Fruiticana</strong>, <strong>Day To Day</strong>, <strong>Surrey Supermarket</strong>, and more across <strong>British Columbia</strong>, <strong>Alberta</strong>, and <strong>Manitoba</strong>.
           </p>
 
           {/* Quick Cluster Shortcuts */}
