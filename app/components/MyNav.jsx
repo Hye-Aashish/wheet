@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { VERIFIED_STORE_COUNT } from "../data/siteMetrics";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { HiMenu } from "react-icons/hi";
@@ -85,16 +84,6 @@ export default function MyNav() {
     { title: "Store Locator", link: "/#store-locator" },
     { title: "Blogs", link: "/blogs" },
     { title: "Contact Us", link: "/contact-us" },
-  ];
-
-  // Quick product links in mobile sidebar
-  const quickFlours = [
-    { name: "Kodo Millet", slug: "baaz-kodo-millet-flour", color: "from-sky-600 to-amber-500" },
-    { name: "Besan", slug: "baaz-besan-chickpea-flour", color: "from-orange-500 to-amber-600" },
-    { name: "Ragi", slug: "baaz-finger-millet-ragi-flour", color: "from-rose-600 to-orange-500" },
-    { name: "Corn Flour", slug: "baaz-corn-flour", color: "from-yellow-500 to-amber-500" },
-    { name: "Bajra", slug: "baaz-pearl-millet-bajra-flour", color: "from-emerald-600 to-green-600" },
-    { name: "Jowar", slug: "baaz-sorghum-jowar-flour", color: "from-stone-600 to-stone-800" },
   ];
 
   // Handle store locator smooth scroll
@@ -288,49 +277,7 @@ export default function MyNav() {
               })}
             </div>
 
-            {/* 2. STORE LOCATOR MINI FEATURE BANNER */}
-            <div 
-              onClick={(e) => handleNavClick(e, { isStoreLocator: true })}
-              className="bg-gradient-to-br from-[#023c68] to-[#04599a] text-white p-4 rounded-2xl shadow-md cursor-pointer relative overflow-hidden group border border-[#023c68]/20"
-            >
-              <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-amber-400/20 rounded-full blur-xl pointer-events-none" />
-              <div className="flex items-start justify-between mb-2">
-                <span className="bg-amber-400 text-stone-950 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                  📍 {VERIFIED_STORE_COUNT} Verified Stores
-                </span>
-                <span className="text-xs text-amber-300 font-bold group-hover:translate-x-1 transition-transform">
-                  View Map →
-                </span>
-              </div>
-              <h4 className="font-bold text-sm text-white leading-snug mb-1">
-                Find BAAZ Atta In Stores
-              </h4>
-              <p className="text-[11px] text-stone-200 leading-relaxed">
-                Fruiticana, Day To Day, Surrey Supermarket & partners across BC, AB & MB.
-              </p>
-            </div>
-
-            {/* 3. FLOUR CATEGORIES QUICK CHIPS */}
-            <div className="space-y-2">
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-stone-400 px-3">
-                Our 5 Flours Range
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {quickFlours.map((flour, idx) => (
-                  <Link
-                    key={idx}
-                    href={`/product/${flour.slug}`}
-                    onClick={() => setSideBar(false)}
-                    className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white hover:bg-stone-100 text-stone-800 border border-stone-200/80 shadow-2xs transition flex items-center gap-1.5"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                    <span>{flour.name}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* 4. QUICK HELP & SUPPORT */}
+            {/* 2. QUICK HELP & SUPPORT */}
             <div className="bg-white p-3.5 rounded-xl border border-stone-200/80 space-y-2.5">
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-stone-400">
                 Customer Support
