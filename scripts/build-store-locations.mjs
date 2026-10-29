@@ -21,7 +21,7 @@ const fixes = {
 };
 
 const defaultHours = "Open Daily • 9:00 AM – 9:00 PM";
-const defaultProducts = "Durum Wheat, Multigrain, Corn, Besan, Jawar";
+const defaultProducts = "Kodo, Besan, Ragi, Corn, Bajra, Jowar";
 
 const data = JSON.parse(fs.readFileSync("scripts/geocoded.json", "utf8"));
 
@@ -53,4 +53,8 @@ const lines = data.map((s) => {
 
 const out = `export const storeLocations = [\n${lines.join(",\n")},\n];\n`;
 fs.writeFileSync("app/data/storeLocations.js", out);
+fs.writeFileSync(
+  "app/data/siteMetrics.js",
+  `/** Auto-generated — do not edit by hand. */\nexport const VERIFIED_STORE_COUNT = ${data.length};\n`
+);
 console.log(`Wrote ${data.length} locations`);

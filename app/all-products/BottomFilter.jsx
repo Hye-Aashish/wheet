@@ -5,41 +5,30 @@ import { RxCross2 } from "react-icons/rx";
 import { BiCategory } from "react-icons/bi";
 import { MdSort } from "react-icons/md";
 import { IoColorFilterSharp, IoArrowBack } from "react-icons/io5";
+import AyutramartProduct from "../AyutramartData";
 
 const filterCategories = [
-  { name: "Category", options: ["Durum Wheat (1)", "Multigrain (1)", "Corn Flour (1)", "Besan Flour (1)", "Jawar Flour (1)"] },
+  {
+    name: "Category",
+    options: [
+      "Kodo Millet (1)",
+      "Besan (1)",
+      "Ragi (1)",
+      "Corn Flour (1)",
+      "Bajra (1)",
+      "Jowar (1)",
+    ],
+  },
   { name: "Price", options: ["Under ₹300", "₹300 - ₹600", "Above ₹600"] },
-  { name: "Packaging", options: ["2 lb (907g)", "5 kg Bag", "10 kg Bag", "20 lb (9.07kg)"] },
-  { name: "Form", options: ["Fine Flour", "Stone Ground"] },
+  { name: "Packaging", options: ["4 lb (1.81 kg)"] },
+  { name: "Form", options: ["Stone Ground Flour"] },
 ];
 
-const categoriesData = [
-  {
-    title: "Durum Wheat Atta",
-    link: "/product/baaz-durum-wheat-traditional-atta",
-    image: "/img/prod2.png"
-  },
-  {
-    title: "Multigrain Atta",
-    link: "/product/baaz-multigrain-atta",
-    image: "/img/prod1.png"
-  },
-  {
-    title: "Corn Flour",
-    link: "/product/baaz-corn-flour",
-    image: "/img/prod3.png"
-  },
-  {
-    title: "Besan Flour",
-    link: "/product/baaz-besan-flour",
-    image: "/img/prod4.png"
-  },
-  {
-    title: "Jawar Flour",
-    link: "/product/baaz-jawar-flour",
-    image: "/img/prod5.png"
-  }
-];
+const categoriesData = AyutramartProduct.map((item) => ({
+  title: item.heading,
+  link: `/product/${item.title.toLowerCase().replace(/,/g, "").split(" ").join("-")}`,
+  image: item.img,
+}));
 
 export default function Superdropdown() {
   const [showSortDropdown, setShowSortDropdown] = useState(false);
@@ -127,7 +116,7 @@ export default function Superdropdown() {
         <div className="inset-0 fixed bg-black/60 z-[99999] flex flex-col justify-end">
           <div className="w-full bg-white rounded-t-2xl p-6 pb-20 space-y-4 animate-in slide-in-from-bottom duration-200 relative">
             <h3 className="text-center font-bold text-gray-800 text-base border-b pb-3">
-              Select Atta Category
+              Select Flour Category
             </h3>
             <button
               onClick={() => setShowCategoriesDropdown(false)}
@@ -137,20 +126,21 @@ export default function Superdropdown() {
             </button>
             <div className="grid grid-cols-2 gap-3 pt-2">
               {categoriesData.map((category, index) => (
-                <div
+                <a
                   key={index}
+                  href={category.link}
                   onClick={() => setShowCategoriesDropdown(false)}
                   className="bg-gray-50 rounded-xl p-3 border border-gray-200 text-center cursor-pointer hover:border-[#023c68] transition"
                 >
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-20 object-cover rounded-lg mb-2"
+                    className="w-full h-20 object-contain rounded-lg mb-2"
                   />
-                  <p className="font-semibold text-xs text-gray-800 line-clamp-1">
+                  <p className="font-semibold text-xs text-gray-800 line-clamp-2">
                     {category.title}
                   </p>
-                </div>
+                </a>
               ))}
             </div>
           </div>
