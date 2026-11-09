@@ -1,6 +1,5 @@
 import React from 'react';
 import AllProducts from '../components/AllProducts';
-import BottomFilter from "./BottomFilter";
 
 export const metadata = {
   title: "Explore Our Full BAAZ Atta Range | BAAZ Canada",
@@ -10,8 +9,8 @@ export const metadata = {
 export default function Page() {
   return (
     <main>
-      <BottomFilter />
       <AllProducts />
     </main>
   );
 }
+

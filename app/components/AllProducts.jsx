@@ -1,52 +1,11 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { FaGreaterThan } from "react-icons/fa6";
-import { FaSearch, FaFilter } from "react-icons/fa";
 import AyutramartProduct from "../AyutramartData";
 import ProductAyurvedCard from "./ProductAyurvedCard";
 
 export default function AllProducts() {
-  const [sortBy, setSortBy] = useState("newest");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [priceRange, setPriceRange] = useState(1500);
-
-  const categories = [
-    "All",
-    "Kodo Millet",
-    "Besan",
-    "Ragi",
-    "Corn Flour",
-    "Bajra",
-    "Jowar",
-  ];
-
-  // Filter products based on Category, Search & Price
-  const filteredProducts = AyutramartProduct.filter((prod) => {
-    const matchesCategory =
-      selectedCategory === "All" ||
-      prod.heading?.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-      prod.category?.toLowerCase().includes(selectedCategory.toLowerCase());
-
-    const matchesSearch =
-      !searchQuery ||
-      prod.heading?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      prod.description?.toLowerCase().includes(searchQuery.toLowerCase());
-
-    const matchesPrice = Number(prod.price) <= priceRange;
-
-    return matchesCategory && matchesSearch && matchesPrice;
-  });
-
-  // Sort products
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    if (sortBy === "price-high") return Number(b.price) - Number(a.price);
-    if (sortBy === "price-low") return Number(a.price) - Number(b.price);
-    if (sortBy === "rating") return Number(b.rating) - Number(a.rating);
-    return 0; // Default newest / original order
-  });
-
   return (
     <div className="bg-[#f8f6f0] min-h-screen">
       
@@ -72,141 +31,30 @@ export default function AllProducts() {
       </div>
 
       {/* MAIN PRODUCTS SECTION */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-12 xl:px-28 py-8 lg:py-16 pb-28 lg:pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          
-          {/* SIDEBAR FILTER (VISIBLE ON BOTH MOBILE AND DESKTOP) */}
-          <div className="w-full lg:col-span-3 bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6 sm:space-y-8 static lg:sticky lg:top-24">
-            
-            {/* Search Input */}
-            <div>
-              <h3 className="text-base font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4 flex items-center gap-2">
-                <FaSearch className="text-[#023c68]" /> Search Products
-              </h3>
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search flour, atta..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#023c68]"
-                />
-                <FaSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs" />
-              </div>
-            </div>
-
-            {/* Category Filter */}
-            <div>
-              <h3 className="text-base font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4 flex items-center gap-2">
-                <FaFilter className="text-[#023c68]" /> Categories
-              </h3>
-              <div className="space-y-2">
-                {categories.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`w-full text-left px-3.5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer flex items-center justify-between ${
-                      selectedCategory === cat
-                        ? "bg-[#023c68] text-white"
-                        : "text-gray-700 hover:bg-gray-100"
-                    }`}
-                  >
-                    <span>{cat}</span>
-                    {selectedCategory === cat && <span className="text-xs">✓</span>}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Max Price Slider */}
-            <div>
-              <h3 className="text-base font-bold text-gray-900 border-b border-gray-100 pb-3 mb-4 flex items-center justify-between">
-                <span>Max Price:</span>
-                <span className="text-[#023c68]">₹{priceRange}</span>
-              </h3>
-              <input
-                type="range"
-                min="100"
-                max="1500"
-                step="50"
-                value={priceRange}
-                onChange={(e) => setPriceRange(Number(e.target.value))}
-                className="w-full accent-[#023c68] cursor-pointer"
-              />
-              <div className="flex justify-between text-xs text-gray-400 mt-1">
-                <span>₹100</span>
-                <span>₹1500</span>
-              </div>
-            </div>
-
-            {/* Reset Filters */}
-            <button
-              onClick={() => {
-                setSelectedCategory("All");
-                setSearchQuery("");
-                setPriceRange(1500);
-                setSortBy("newest");
-              }}
-              className="w-full py-2.5 rounded-xl border border-gray-300 text-xs font-bold text-gray-700 hover:bg-gray-100 transition cursor-pointer"
-            >
-              Reset All Filters
-            </button>
-
-          </div>
-
-          {/* MAIN PRODUCT GRID & CONTROLS */}
-          <div className="w-full lg:col-span-9 space-y-6">
-            
-            {/* Top Controls Bar */}
-            <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-row justify-between items-center gap-4">
-              <p className="text-xs sm:text-sm text-gray-600 font-medium">
-                Showing <strong className="text-gray-900 font-bold">{sortedProducts.length}</strong> products
-              </p>
-
-              <div className="flex items-center gap-2 sm:gap-3">
-                <span className="text-xs sm:text-sm text-gray-500 font-medium">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-200 bg-gray-50 rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#023c68] cursor-pointer"
-                >
-                  <option value="newest">Featured & Newest</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Product Grid */}
-            {sortedProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-                {sortedProducts.map((elm, index) => (
-                  <div key={elm.id || index} className="w-full flex h-full">
-                    <ProductAyurvedCard product={elm} />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="bg-white rounded-2xl p-8 sm:p-12 text-center border border-gray-100 space-y-3">
-                <h3 className="text-xl font-bold text-gray-800">No Products Found</h3>
-                <p className="text-sm text-gray-500">Try adjusting your filters or search keywords.</p>
-                <button
-                  onClick={() => {
-                    setSelectedCategory("All");
-                    setSearchQuery("");
-                    setPriceRange(1500);
-                  }}
-                  className="px-5 py-2.5 bg-[#023c68] text-white rounded-full text-xs font-bold cursor-pointer"
-                >
-                  Clear Filters
-                </button>
-              </div>
-            )}
-
-          </div>
-
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 xl:px-24 py-10 lg:py-16">
+        
+        {/* Section Top Header */}
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-2">
+          <span className="text-xs md:text-sm font-bold tracking-widest text-[#023c68] uppercase bg-[#023c68]/10 px-4 py-1.5 rounded-full inline-block">
+            100% Pure & Freshly Stone-Ground
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-gray-900">
+            Explore All Products
+          </h2>
+          <p className="text-sm md:text-base text-gray-600">
+            All six BAAZ Flour Mill 4 lb bags — kodo, besan, ragi, corn, bajra, and jowar.
+          </p>
         </div>
+
+        {/* Product Grid - Full Width without Filters */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          {AyutramartProduct.map((elm, index) => (
+            <div key={elm.id || index} className="w-full flex h-full">
+              <ProductAyurvedCard product={elm} />
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   );
