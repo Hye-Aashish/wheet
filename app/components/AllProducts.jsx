@@ -14,11 +14,12 @@ export default function AllProducts() {
 
   const categories = [
     "All",
-    "Durum Wheat",
-    "Multigrain Atta",
+    "Kodo Millet",
+    "Besan",
+    "Ragi",
     "Corn Flour",
-    "Besan Flour",
-    "Jawar Flour",
+    "Bajra",
+    "Jowar",
   ];
 
   // Filter products based on Category, Search & Price

@@ -28,7 +28,7 @@ const ProductDetails = ({ slug, singleProduct }) => {
 
   const [activeImg, setActiveImg] = useState(product.inerimgList ? product.inerimgList[0] : product.img);
   const [qnty, setQnty] = useState(1);
-  const [selectedVariant, setSelectedVariant] = useState(product.variants ? product.variants[1]?.id : "10kg");
+  const [selectedVariant, setSelectedVariant] = useState(product.variants?.[0]?.id ?? "4lb");
   const [currentPrice, setCurrentPrice] = useState(product.price);
 
   const handleVariantChange = (variant) => {

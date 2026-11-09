@@ -14,7 +14,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 5,
@@ -82,7 +82,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 7,
@@ -116,7 +116,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 8,
@@ -133,7 +133,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 9,
@@ -150,7 +150,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 10,
@@ -167,7 +167,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 11,
@@ -184,7 +184,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 12,
@@ -201,7 +201,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 13,
@@ -218,7 +218,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 14,
@@ -235,7 +235,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 15,
@@ -252,7 +252,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 16,
@@ -269,7 +269,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 17,
@@ -286,7 +286,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 18,
@@ -303,7 +303,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 19,
@@ -320,7 +320,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 20,
@@ -337,7 +337,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 21,
@@ -354,7 +354,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 22,
@@ -371,7 +371,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 23,
@@ -388,7 +388,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 24,
@@ -405,7 +405,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 25,
@@ -422,7 +422,7 @@ export const storeLocations = [
     badge: "Fruiticana",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 26,
@@ -439,7 +439,7 @@ export const storeLocations = [
     badge: "Day To Day",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 27,
@@ -456,7 +456,7 @@ export const storeLocations = [
     badge: "Day To Day",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 28,
@@ -473,7 +473,7 @@ export const storeLocations = [
     badge: "Day To Day",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 29,
@@ -490,7 +490,7 @@ export const storeLocations = [
     badge: "Day To Day",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 30,
@@ -507,7 +507,7 @@ export const storeLocations = [
     badge: "Day To Day",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 31,
@@ -524,7 +524,7 @@ export const storeLocations = [
     badge: "Day To Day",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 32,
@@ -541,7 +541,7 @@ export const storeLocations = [
     badge: "Day To Day",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 33,
@@ -558,7 +558,7 @@ export const storeLocations = [
     badge: "Surrey Supermarket",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 34,
@@ -575,7 +575,7 @@ export const storeLocations = [
     badge: "Surrey Supermarket",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 35,
@@ -592,7 +592,7 @@ export const storeLocations = [
     badge: "Aggarwal Grocery Hub",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 36,
@@ -609,7 +609,7 @@ export const storeLocations = [
     badge: "Aggarwal Grocery Hub",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 37,
@@ -626,7 +626,7 @@ export const storeLocations = [
     badge: "Sun Farm",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 38,
@@ -643,7 +643,7 @@ export const storeLocations = [
     badge: "Sunfarm",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 39,
@@ -660,7 +660,7 @@ export const storeLocations = [
     badge: "Sunfarm",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 40,
@@ -677,7 +677,7 @@ export const storeLocations = [
     badge: "Farm & Spice",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 41,
@@ -694,7 +694,7 @@ export const storeLocations = [
     badge: "Farm & Spice",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 42,
@@ -711,7 +711,7 @@ export const storeLocations = [
     badge: "Farm & Spice",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 43,
@@ -728,7 +728,7 @@ export const storeLocations = [
     badge: "Brampton Cash and Carry",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 44,
@@ -745,7 +745,7 @@ export const storeLocations = [
     badge: "Singh Grocers",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
   {
     id: 45,
@@ -762,6 +762,6 @@ export const storeLocations = [
     badge: "Malhotra Wholesale",
     phone: "",
     hours: "Open Daily • 9:00 AM – 9:00 PM",
-    products: "Durum Wheat, Multigrain, Corn, Besan, Jawar",
+    products: "Kodo, Besan, Ragi, Corn, Bajra, Jowar",
   },
 ];

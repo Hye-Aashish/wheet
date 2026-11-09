@@ -24,26 +24,12 @@ const Footer = () => {
 
   // ================= PRODUCTS =================
   const products = [
-    {
-      title: "BAAZ Durum Wheat Traditional Atta",
-      slug: "baaz-durum-wheat-traditional-atta",
-    },
-    {
-      title: "BAAZ Multigrain Atta",
-      slug: "baaz-multigrain-atta",
-    },
-    {
-      title: "BAAZ Corn Flour",
-      slug: "baaz-corn-flour",
-    },
-    {
-      title: "BAAZ Besan Flour",
-      slug: "baaz-besan-flour",
-    },
-    {
-      title: "BAAZ Jawar Flour",
-      slug: "baaz-jawar-flour",
-    },
+    { title: "BAAZ Kodo Millet Flour", slug: "baaz-kodo-millet-flour" },
+    { title: "BAAZ Besan Chickpea Flour", slug: "baaz-besan-chickpea-flour" },
+    { title: "BAAZ Finger Millet Ragi Flour", slug: "baaz-finger-millet-ragi-flour" },
+    { title: "BAAZ Corn Flour", slug: "baaz-corn-flour" },
+    { title: "BAAZ Pearl Millet Bajra Flour", slug: "baaz-pearl-millet-bajra-flour" },
+    { title: "BAAZ Sorghum Jowar Flour", slug: "baaz-sorghum-jowar-flour" },
   ];
 
   // ================= QUICK LINKS =================

@@ -11,11 +11,12 @@ export default function ProductAyurved() {
 
   const categories = [
     { label: "All", filter: "All" },
-    { label: "Durum Wheat", filter: "Durum" },
-    { label: "Multigrain", filter: "Multigrain" },
+    { label: "Kodo Millet", filter: "Kodo" },
+    { label: "Besan", filter: "Besan" },
+    { label: "Ragi", filter: "Ragi" },
     { label: "Corn Flour", filter: "Corn" },
-    { label: "Besan Flour", filter: "Besan" },
-    { label: "Jawar Flour", filter: "Jawar" },
+    { label: "Bajra", filter: "Bajra" },
+    { label: "Jowar", filter: "Jowar" },
   ];
 
   const displayedProducts = AyutramartProduct.filter((prod) => {
@@ -47,7 +48,7 @@ export default function ProductAyurved() {
             Our Products
           </h2>
           <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-            Discover all wholesome varieties of premium Canadian Durum Wheat, Multigrain, Corn Flour, Besan, and Jawar flours.
+            Six Matwala Foods flours from BAAZ Flour Mill — kodo, besan, ragi, corn, bajra, and jowar — each in a 4 lb bag.
           </p>
         </div>
 

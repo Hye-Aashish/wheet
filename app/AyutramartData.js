@@ -1,182 +1,179 @@
+const shared = {
+  availability: "In Stock",
+  origin: "Product of Canada — locally milled in Surrey, BC",
+  packaging: "Premium quality sealed food-grade bag",
+  shelfLife: "9 months from manufacture date",
+  storageInstructions:
+    "Store in a cool, dry place away from direct sunlight. Keep sealed in an airtight container after opening.",
+  brand: "Matwala Foods · BAAZ Flour Mill",
+  milledAt: "103 - 13045 84 Ave, Surrey, BC",
+  contactPhone: "778-981-2002",
+  contactEmail: "matwalafoods1@gmail.com",
+  netWeight: "4 lb (1.81 kg)",
+  discount: "0",
+  variants: [{ id: "4lb", label: "4 lb Pack", price: "249" }],
+};
+
+function product(entry) {
+  const img = entry.img;
+  return {
+    ...shared,
+    ...entry,
+    imgHover: img,
+    inerimgList: [img],
+    originalPrice: entry.originalPrice || entry.price,
+  };
+}
+
 export default [
-  {
+  product({
     id: 1,
-    title: "BAAZ Durum Wheat Traditional Atta",
-    heading: "BAAZ Durum Wheat Traditional Atta",
-    img: "/img/prod2.png",
-    imgHover: "/img/prod2.png",
-    inerimgList: ["/img/prod2.png", "/img/prod2.png", "/img/prod2.png"],
-    price: "450",
-    originalPrice: "650",
+    title: "BAAZ Kodo Millet Flour",
+    heading: "BAAZ Kodo Millet Flour",
+    img: "/img/products/baaz-kodo-millet-flour-4lb.jpg",
+    price: "249",
     rating: "4.8",
-    reviewsCount: 342,
-    discount: "30",
-    sku: "BAAZ-DW-001",
-    availability: "In Stock",
-    category: "Durum Wheat Flour",
-    shelfLife: "9 Months from Manufacture Date",
-    origin: "Product of Canada",
-    packaging: "Moisture-Lock Sealed Food Grade Bag",
-    ingredients: "100% Pure Canadian Durum Wheat Grains",
-    netWeight: "20 lb (9.07 kg)",
-    storageInstructions: "Store in a cool, dry place away from direct sunlight. Keep sealed in an airtight container after opening.",
-    userGuide: "Add 2 cups of BAAZ Durum Wheat Atta to a mixing bowl. Gradually add warm water while kneading into a smooth, pliable dough. Cover with a damp cloth and rest for 15 minutes before rolling into soft, delicious rotis.",
+    reviewsCount: 86,
+    sku: "BAAZ-KODO-4LB",
+    category: "Kodo Millet Flour",
+    regionalName: "ਕੋਦੋ ਦਾ ਆਟਾ · कोदो का आटा",
+    ingredients: "100% kodo millet (kodra / kodon)",
+    nutritionPer100g:
+      "Energy 356 kcal · Protein 11g · Carbs 72g · Fat 3.5g · Fiber 9g · Sodium 5mg · Iron 4% DV · Calcium 2% DV",
+    userGuide:
+      "Mix with warm water to form a soft dough for rotis, or blend into batters for idli, dosa, and wholesome baking.",
     benefits: [
-      "Made from 100% premium Canadian durum wheat grains",
-      "High natural dietary fiber for healthy digestion",
-      "Yields ultra-soft rotis that stay fresh longer",
-      "Zero added preservatives, chemicals, or artificial bleach"
-    ],
-    variants: [
-      { id: "v1-5", label: "5 kg Pack", price: "240" },
-      { id: "v1-10", label: "10 kg Pack", price: "450" },
-      { id: "v1-20", label: "20 lb (9.07 kg) Pack", price: "850" }
+      "Stone-ground kodo millet flour (kodon atta)",
+      "High dietary fiber for everyday nutrition",
+      "Naturally gluten-free ancient grain",
+      "Milled fresh in Surrey, BC, Canada",
     ],
     description:
-      "BAAZ Durum Wheat Traditional Atta (farine de blé dur) is made from premium quality Canadian durum wheat grains and carefully stone-milled to preserve natural wheat nutrients, germ, and fiber. Perfect for making soft, fluffy rotis, stuffed parathas, and traditional daily flatbreads."
-  },
-  {
+      "BAAZ Kodo Millet Flour is premium stone-ground kodra flour from Matwala Foods. Product of Canada, locally milled in Surrey BC for authentic taste, aroma, and nutrition in rotis, porridge, and millet-based recipes.",
+  }),
+  product({
     id: 2,
-    title: "BAAZ Multigrain Atta",
-    heading: "BAAZ Multigrain Atta",
-    img: "/img/prod1.png",
-    imgHover: "/img/prod1.png",
-    inerimgList: ["/img/prod1.png", "/img/prod1.png", "/img/prod1.png"],
-    price: "500",
-    originalPrice: "720",
+    title: "BAAZ Besan Chickpea Flour",
+    heading: "BAAZ Besan Chickpea Flour",
+    img: "/img/products/baaz-besan-chickpea-flour-4lb.jpg",
+    price: "249",
     rating: "4.9",
-    reviewsCount: 512,
-    discount: "30",
-    sku: "BAAZ-MG-002",
-    availability: "In Stock",
-    category: "Multigrain Flour",
-    shelfLife: "9 Months from Manufacture Date",
-    origin: "Product of Canada",
-    packaging: "Moisture-Lock Sealed Food Grade Bag",
-    ingredients: "Whole Wheat, Oats, Ragi, Soy, Maize, Chana Dal, Barley, Psyllium Husk",
-    netWeight: "10 kg (22 lbs)",
-    storageInstructions: "Store in a cool, dry place inside a clean, airtight container.",
-    userGuide: "Mix 2 cups of BAAZ Multigrain Atta with warm water. Knead gently into a soft dough. Rest covered for 15 minutes to allow grains to absorb moisture before cooking soft rotis or parathas.",
+    reviewsCount: 124,
+    sku: "BAAZ-BESAN-4LB",
+    category: "Besan Flour",
+    regionalName: "ਬੇਸਨ · बेसन",
+    ingredients: "100% chickpea (chana) gram flour",
+    nutritionPer100g:
+      "Energy 387 kcal · Protein 22g · Carbs 58g · Fat 6g · Fiber 10g · Sodium 16mg · Iron 6% DV · Calcium 4% DV",
+    userGuide:
+      "Sift before use. Perfect for pakoras, cheelas, kadhi, and traditional sweets such as besan ladoo.",
     benefits: [
-      "Blend of 7+ essential grains for complete daily nutrition",
-      "High protein & dietary fiber for active energy",
-      "Promotes gut health and balanced digestion",
-      "Delicious nutty flavor with ultra-soft texture"
-    ],
-    variants: [
-      { id: "v2-5", label: "5 kg Pack", price: "270" },
-      { id: "v2-10", label: "10 kg Pack", price: "500" },
-      { id: "v2-20", label: "20 kg Pack", price: "950" }
+      "Fine chickpea flour (besan) with rich protein",
+      "Silky texture for light batters and sweets",
+      "No preservatives or artificial colours",
+      "Locally milled in Surrey, BC",
     ],
     description:
-      "BAAZ Multigrain Atta is a wholesome blend of carefully selected whole grains including oats, ragi, soy, chana dal, and barley. Crafted to deliver maximum nutrition, fiber, and delicious taste for healthy family meals."
-  },
-  {
+      "BAAZ Besan Chickpea Flour is finely ground gram flour from premium chickpeas. A Matwala Foods staple for savoury snacks, cheelas, kadhi, and festive sweets — product of Canada.",
+  }),
+  product({
     id: 3,
+    title: "BAAZ Finger Millet Ragi Flour",
+    heading: "BAAZ Finger Millet Ragi Flour",
+    img: "/img/products/baaz-finger-millet-ragi-flour-4lb.jpg",
+    price: "249",
+    rating: "4.8",
+    reviewsCount: 97,
+    sku: "BAAZ-RAGI-4LB",
+    category: "Ragi Flour",
+    regionalName: "ਰਾਗੀ ਦਾ ਆਟਾ · रागी का आटा",
+    ingredients: "100% finger millet (ragi)",
+    nutritionPer100g:
+      "Energy 354 kcal · Protein 13g · Carbs 80g · Fat 2.7g · Fiber 6.6g · Sodium 5mg · Iron 3% DV · Calcium 1% DV",
+    userGuide:
+      "Knead with warm water for soft ragi rotis, or stir into porridge and baking mixes for added nutrition.",
+    benefits: [
+      "Whole finger millet (ragi) flour",
+      "Calcium-rich grain for family meals",
+      "Gluten-free millet option",
+      "Stone-ground in Surrey, BC",
+    ],
+    description:
+      "BAAZ Finger Millet Ragi Flour delivers the earthy nutrition of ragi in a smooth milling from BAAZ Flour Mill. Ideal for rotis, porridge, and health-focused baking.",
+  }),
+  product({
+    id: 4,
     title: "BAAZ Corn Flour",
     heading: "BAAZ Corn Flour",
-    img: "/img/prod3.png",
-    imgHover: "/img/prod3.png",
-    inerimgList: ["/img/prod3.png", "/img/prod3.png", "/img/prod3.png"],
-    price: "220",
-    originalPrice: "320",
+    img: "/img/products/baaz-corn-flour-4lb.jpg",
+    price: "229",
     rating: "4.7",
-    reviewsCount: 289,
-    discount: "30",
-    sku: "BAAZ-CF-003",
-    availability: "In Stock",
+    reviewsCount: 112,
+    sku: "BAAZ-CORN-4LB",
     category: "Corn Flour",
-    shelfLife: "9 Months from Manufacture Date",
-    origin: "Product of Canada",
-    packaging: "Moisture-Lock Sealed Food Grade Bag",
-    ingredients: "100% Pure Canadian Yellow Corn (Fine Corn Flour)",
-    netWeight: "2 lb (907 g)",
-    storageInstructions: "Keep in a cool, dry, hygienic environment. Store in an airtight container.",
-    userGuide: "Combine 2 cups of BAAZ Corn Flour with warm water and knead to form a smooth dough. Flatten gently on parchment paper or between palms, and cook on a medium hot tawa with ghee or butter.",
+    regionalName: "ਮੱਕੀ ਦਾ ਆਟਾ · मक्की का आटा",
+    ingredients: "100% yellow corn (makki)",
+    nutritionPer100g:
+      "Energy 365 kcal · Protein 7g · Carbs 78g · Fat 4g · Fiber 7g · Sodium 5mg · Iron 4% DV · Calcium 2% DV",
+    userGuide:
+      "Combine with warm water for makki di roti, cornbread, tortillas, and crispy snack batters.",
     benefits: [
-      "100% Pure fine yellow corn flour (Makki Atta)",
-      "Naturally gluten-free grain rich in antioxidants",
-      "High in natural dietary fiber and essential minerals",
-      "Ideal for authentic Makki ki Roti, cornbread, and crispy snacks"
-    ],
-    variants: [
-      { id: "v3-1", label: "2 lb (907 g) Pack", price: "220" },
-      { id: "v3-2", label: "2 kg Pack", price: "420" },
-      { id: "v3-5", label: "5 kg Pack", price: "850" }
+      "Fine yellow corn flour (makki atta)",
+      "Naturally gluten-free",
+      "Golden colour and authentic corn aroma",
+      "Product of Canada · milled in Surrey BC",
     ],
     description:
-      "BAAZ Corn Flour (fine corn flour) is stone-milled from 100% premium Canadian yellow corn kernels to deliver authentic texture, vibrant golden color, and rich corn aroma. Perfect for authentic Makki ki Roti, savory cornbread, tortillas, and crispy batters."
-  },
-  {
-    id: 4,
-    title: "BAAZ Besan Flour",
-    heading: "BAAZ Besan Flour",
-    img: "/img/prod4.png",
-    imgHover: "/img/prod4.png",
-    inerimgList: ["/img/prod4.png", "/img/prod4.png", "/img/prod4.png"],
-    price: "240",
-    originalPrice: "340",
-    rating: "4.9",
-    reviewsCount: 420,
-    discount: "30",
-    sku: "BAAZ-BF-004",
-    availability: "In Stock",
-    category: "Gram Flour (Besan)",
-    shelfLife: "9 Months from Manufacture Date",
-    origin: "Product of Canada",
-    packaging: "Moisture-Lock Sealed Food Grade Bag",
-    ingredients: "100% Pure Canadian Chana Dal (Fine Gram Flour)",
-    netWeight: "2 lb (907 g)",
-    storageInstructions: "Store in a cool, dry location away from moisture. Keep sealed in an airtight container.",
-    userGuide: "Sift BAAZ Besan Flour before mixing with water and spices for fluffy pakoras or crispy cheelas. For sweets like laddoos, roast slowly in pure ghee until aromatic and golden brown.",
-    benefits: [
-      "100% Pure high-protein fine gram flour (Besan)",
-      "Milled from premium Canadian split chickpeas (chana dal)",
-      "Silky smooth, lump-free texture for light batters and sweets",
-      "Zero preservatives, chemicals, or artificial colorings"
-    ],
-    variants: [
-      { id: "v4-1", label: "2 lb (907 g) Pack", price: "240" },
-      { id: "v4-2", label: "2 kg Pack", price: "460" },
-      { id: "v4-5", label: "5 kg Pack", price: "950" }
-    ],
-    description:
-      "BAAZ Besan Flour (fine gram flour) is finely ground from select 100% pure Canadian chana dal. Renowned for its rich nutty fragrance, silky smooth texture, and versatile culinary applications in pakoras, savory cheelas, kadhi, and traditional sweets."
-  },
-  {
+      "BAAZ Corn Flour is stone-milled from premium Canadian yellow corn for makki roti, cornbread, and traditional Punjabi favourites.",
+  }),
+  product({
     id: 5,
-    title: "BAAZ Jawar Flour",
-    heading: "BAAZ Jawar Flour",
-    img: "/img/prod5.png",
-    imgHover: "/img/prod5.png",
-    inerimgList: ["/img/prod5.png", "/img/prod5.png", "/img/prod5.png"],
-    price: "250",
-    originalPrice: "350",
+    title: "BAAZ Pearl Millet Bajra Flour",
+    heading: "BAAZ Pearl Millet Bajra Flour",
+    img: "/img/products/baaz-pearl-millet-bajra-flour-4lb.jpg",
+    price: "249",
     rating: "4.8",
-    reviewsCount: 215,
-    discount: "28",
-    sku: "BAAZ-JF-005",
-    availability: "In Stock",
-    category: "Sorghum Flour (Jawar)",
-    shelfLife: "9 Months from Manufacture Date",
-    origin: "Product of Canada",
-    packaging: "Moisture-Lock Sealed Food Grade Bag",
-    ingredients: "100% Pure Canadian Sorghum Grains (Jawar)",
-    netWeight: "2 lb (907 g)",
-    storageInstructions: "Store in a cool, dry place inside an airtight container away from moisture.",
-    userGuide: "Combine BAAZ Jawar Flour with warm water and a pinch of salt. Knead into a soft dough and gently hand-pat or roll into rotis. Cook on a hot tawa with a light splash of water on top.",
+    reviewsCount: 88,
+    sku: "BAAZ-BAJRA-4LB",
+    category: "Bajra Flour",
+    regionalName: "ਬਾਜਰਾ ਦਾ ਆਟਾ · बाजरा का आटा",
+    ingredients: "100% pearl millet (bajra)",
+    nutritionPer100g:
+      "Energy 361 kcal · Protein 11g · Carbs 67g · Fat 5g · Fiber 8g · Sodium 6mg · Iron 8% DV · Calcium 2% DV",
+    userGuide:
+      "Knead with warm water and a pinch of salt for soft bajra rotis; cook on a hot tawa with ghee.",
     benefits: [
-      "100% Pure stone-ground sorghum (jawar) flour",
-      "Naturally gluten-free and easy to digest",
-      "Rich in dietary fiber, iron, calcium, and essential minerals",
-      "Low glycemic index, ideal for wholesome healthy lifestyles"
-    ],
-    variants: [
-      { id: "v5-1", label: "2 lb (907 g) Pack", price: "250" },
-      { id: "v5-2", label: "2 kg Pack", price: "480" },
-      { id: "v5-5", label: "5 kg Pack", price: "980" }
+      "Pearl millet (bajra) whole grain flour",
+      "High fiber and iron content",
+      "Gluten-free winter-season staple",
+      "Locally milled at BAAZ Flour Mill, Surrey",
     ],
     description:
-      "BAAZ Jawar Flour (sorghum flour) is freshly milled from pure whole grain sorghum. Naturally gluten-free and loaded with dietary fiber, iron, and micronutrients, it makes soft and nutritious traditional rotis (bhakris)."
-  }
+      "BAAZ Pearl Millet Bajra Flour is wholesome bajra atta for rustic rotis and nutritious everyday meals — premium quality from Matwala Foods.",
+  }),
+  product({
+    id: 6,
+    title: "BAAZ Sorghum Jowar Flour",
+    heading: "BAAZ Sorghum Jowar Flour",
+    img: "/img/products/baaz-sorghum-jowar-flour-4lb.jpg",
+    price: "249",
+    rating: "4.8",
+    reviewsCount: 91,
+    sku: "BAAZ-JOWAR-4LB",
+    category: "Jowar Flour",
+    regionalName: "ਜਿਉਆਰ ਦਾ ਆਟਾ · ज्वार का आटा",
+    ingredients: "100% sorghum (jowar)",
+    nutritionPer100g:
+      "Energy 357 kcal · Protein 10g · Carbs 74g · Fat 3.1g · Fiber 6.3g · Sodium 4mg · Iron 3% DV · Calcium 2% DV",
+    userGuide:
+      "Mix with warm water for jowar bhakri / roti. Rest dough briefly before rolling or hand-patting.",
+    benefits: [
+      "Pure sorghum (jowar) flour",
+      "Gluten-free and easy to digest",
+      "Rich in fiber and minerals",
+      "Milled in Surrey, BC — product of Canada",
+    ],
+    description:
+      "BAAZ Sorghum Jowar Flour is fresh jowar atta for soft bhakris and daily gluten-free rotis. Part of the Matwala Foods BAAZ Flour Mill range.",
+  }),
 ];

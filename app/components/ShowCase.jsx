@@ -7,22 +7,22 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const showcaseData = [
   {
-    title: "Sale 30% Off",
-    topheading: "TRADITIONAL QUALITY",
-    subtitle: "BAAZ Durum Wheat Traditional Atta",
-    image: "/img/prod2.png",
-    buttonText: "Read More",
+    title: "4 lb Pack",
+    topheading: "BAAZ FLOUR MILL",
+    subtitle: "BAAZ Kodo Millet Flour",
+    image: "/img/products/baaz-kodo-millet-flour-4lb.jpg",
+    buttonText: "Shop Now",
     description:
-      "BAAZ Durum Wheat Traditional Atta is made from quality durum wheat and carefully processed to deliver a wholesome, nutritious, and naturally delicious atta. Perfect for making soft and tasty rotis, parathas, and everyday Indian breads.",
+      "Premium kodo millet flour from Matwala Foods — product of Canada, locally milled in Surrey BC. High fiber, gluten-free kodra atta for rotis and everyday millet meals.",
   },
   {
-    title: "Sale 30% Off",
-    topheading: "EVERYDAY NOURISHMENT",
-    subtitle: "BAAZ Multigrain Atta",
-    image: "/img/prod1.png",
-    buttonText: "Read More",
+    title: "4 lb Pack",
+    topheading: "PREMIUM QUALITY",
+    subtitle: "BAAZ Besan Chickpea Flour",
+    image: "/img/products/baaz-besan-chickpea-flour-4lb.jpg",
+    buttonText: "Shop Now",
     description:
-      "BAAZ Multigrain Atta is a wholesome blend of carefully selected grains, crafted to provide delicious taste and everyday nourishment. Ideal for soft rotis, parathas, and healthy homemade meals for the whole family.",
+      "Fine chickpea besan for pakoras, cheelas, kadhi, and sweets. Stone-ground at BAAZ Flour Mill with nutrition facts on every bag.",
   },
 ];
 
